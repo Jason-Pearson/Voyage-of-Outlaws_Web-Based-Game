@@ -5,7 +5,7 @@
 
         //CONTRUCTOR
         constructor() {
-            super(assets.getResult("Ocean")); // make a super call to the createjs.Bitmap class to hold the Ocean.png from the manifest in the assets variable (in game.ts)
+            super(assets.getResult("Sand")); // make a super call to the createjs.Bitmap class to hold the Ocean.png from the manifest in the assets variable (in game.ts)
 
             //basically what would be called in the Start method
             this._dx = 5;

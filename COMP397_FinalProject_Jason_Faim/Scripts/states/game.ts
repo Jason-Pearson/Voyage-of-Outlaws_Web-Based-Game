@@ -2,13 +2,14 @@
     // GAME CLASS
     export class Game extends objects.Scene {
         // PRIVATE INSTANCE VARIABLES
-        private _ship: objects.Ship; // reference of type Ship class - holds Ship gameobject, along with class properties to control behaviour/user input
+        public _ship: objects.Ship; // reference of type Ship class - holds Ship gameobject, along with class properties to control behaviour/user input
         private _barrels: objects.Barrel[] =[]; // referene of type Barrel class - holds Barrel gameobject, along with class properties to control spawning and scoring
         private _enemies: objects.Enemy[] = []; // referene of type Enemy class - holds Enemy gameobject, along with class properties to control spawning, AI movement, player interaction
         private _ocean: objects.Ocean; // reference of type Ocean class - holds Ocean bitmap, along with class properties to control constant scrolling
         private _collision: managers.Collision;
         private _plunderedLabel: objects.Label;
         private _livesLabel: objects.Label;
+        private _playerShot: objects.playerShot;
 
         public finalBarrels: number;
         // CONSTRUCTOR
@@ -53,14 +54,14 @@
             this._collision = new managers.Collision;
 
             // Plundered Label
-            this._plunderedLabel = new objects.Label("Plundered: ", "40px " + config.FONT_FAMILY_DOCK, config.FONT_COLOR_YELLOW2, 5, 5, false);
+            this._plunderedLabel = new objects.Label("Score: ", "40px " + config.FONT_FAMILY_DOCK, config.FONT_COLOR_YELLOW2, 5, 5, false);
             this.addChild(this._plunderedLabel);
             
             // Lives Label
             this._livesLabel = new objects.Label("Lives: ", "40px " + config.FONT_FAMILY_DOCK, config.FONT_COLOR_YELLOW2, 450, 5, false);
             this.addChild(this._livesLabel);
 
-
+            
             stage.addChild(this);
 
             createjs.Sound.play("game", { loop: -1, volume: 0.5, delay: 100 }); // play game music at Start - infinite loop (-1)
@@ -84,10 +85,19 @@
             this._win();
             this._gameOver();
 
+            /*this.on("click", this.playerShot, this);
+            console.log(this.on("click", this.playerShot, this));*/
         }
 
+         /*private playerShot(): void {
+            this._playerShot = new objects.playerShot;
+            this.addChild(this._playerShot);
+            console.log(this.addChild(this._playerShot));
+            stage.addChild(this);
+        }*/
+
         private _updateLabels(): void {
-            this._plunderedLabel.text = "Plundered: " + scoreboard.getBarrels();
+            this._plunderedLabel.text = "Score: " + scoreboard.getBarrels();
             this._livesLabel.text = "Lives: " + scoreboard.getLives();
         }
 
@@ -99,7 +109,7 @@
         }
 
         private _win(): void {
-            if (scoreboard.getBarrels() >= 20) {
+            if (scoreboard.getBarrels() >= 200) {
                 createjs.Sound.stop(); // stop game music upon getting 20 barrels
                 changeState(config.WIN_STATE);
             }

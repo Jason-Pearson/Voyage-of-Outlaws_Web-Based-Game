@@ -23,9 +23,164 @@
     font-style: normal;
 
 }
+@font-face {
+    font-family: 'failed_attemptregular';
+    src: url('../Assets_2/fonts/webfonts/failed_attempt-webfont.eot');
+    src: url('../Assets_2/fonts/webfonts/failed_attempt-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../Assets_2/fonts/webfonts/failed_attempt-webfont.woff2') format('woff2'),
+         url('../Assets_2/fonts/webfonts/failed_attempt-webfont.woff') format('woff'),
+         url('../Assets_2/fonts/webfonts/failed_attempt-webfont.ttf') format('truetype'),
+         url('../Assets_2/fonts/webfonts/failed_attempt-webfont.svg#failed_attemptregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
 
+}
+
+
+
+
+@font-face {
+    font-family: 'minisystemregular';
+    src: url('../Assets_2/fonts/webfonts/minisystem-webfont.eot');
+    src: url('../Assets_2/fonts/webfonts/minisystem-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../Assets_2/fonts/webfonts/minisystem-webfont.woff2') format('woff2'),
+         url('../Assets_2/fonts/webfonts/minisystem-webfont.woff') format('woff'),
+         url('../Assets_2/fonts/webfonts/minisystem-webfont.ttf') format('truetype'),
+         url('../Assets_2/fonts/webfonts/minisystem-webfont.svg#minisystemregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'v_dubregular';
+    src: url('../Assets_2/fonts/webfonts/v_dub-webfont.eot');
+    src: url('../Assets_2/fonts/webfonts/v_dub-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../Assets_2/fonts/webfonts/v_dub-webfont.woff2') format('woff2'),
+         url('../Assets_2/fonts/webfonts/v_dub-webfont.woff') format('woff'),
+         url('../Assets_2/fonts/webfonts/v_dub-webfont.ttf') format('truetype'),
+         url('../Assets_2/fonts/webfonts/v_dub-webfont.svg#v_dubregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: '256_bytesregular';
+    src: url('../Assets_2/fonts/webfonts/256_bytes-webfont.eot');
+    src: url('../Assets_2/fonts/webfonts/256_bytes-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../Assets_2/fonts/webfonts/256_bytes-webfont.woff2') format('woff2'),
+         url('../Assets_2/fonts/webfonts/256_bytes-webfont.woff') format('woff'),
+         url('../Assets_2/fonts/webfonts/256_bytes-webfont.ttf') format('truetype'),
+         url('../Assets_2/fonts/webfonts/256_bytes-webfont.svg#256_bytesregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'astron_boyvideo';
+    src: url('../Assets_2/fonts/webfonts/astron_boy_video-webfont.eot');
+    src: url('../Assets_2/fonts/webfonts/astron_boy_video-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../Assets_2/fonts/webfonts/astron_boy_video-webfont.woff2') format('woff2'),
+         url('../Assets_2/fonts/webfonts/astron_boy_video-webfont.woff') format('woff'),
+         url('../Assets_2/fonts/webfonts/astron_boy_video-webfont.ttf') format('truetype'),
+         url('../Assets_2/fonts/webfonts/astron_boy_video-webfont.svg#astron_boyvideo') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'astron_boywonder';
+    src: url('../Assets_2/fonts/webfonts/astron_boy_wonder-webfont.eot');
+    src: url('../Assets_2/fonts/webfonts/astron_boy_wonder-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../Assets_2/fonts/webfonts/astron_boy_wonder-webfont.woff2') format('woff2'),
+         url('../Assets_2/fonts/webfonts/astron_boy_wonder-webfont.woff') format('woff'),
+         url('../Assets_2/fonts/webfonts/astron_boy_wonder-webfont.ttf') format('truetype'),
+         url('../Assets_2/fonts/webfonts/astron_boy_wonder-webfont.svg#astron_boywonder') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'astron_boyregular';
+    src: url('../Assets_2/fonts/webfonts/astron_boy-webfont.eot');
+    src: url('../Assets_2/fonts/webfonts/astron_boy-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../Assets_2/fonts/webfonts/astron_boy-webfont.woff2') format('woff2'),
+         url('../Assets_2/fonts/webfonts/astron_boy-webfont.woff') format('woff'),
+         url('../Assets_2/fonts/webfonts/astron_boy-webfont.ttf') format('truetype'),
+         url('../Assets_2/fonts/webfonts/astron_boy-webfont.svg#astron_boyregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'borg_9regular';
+    src: url('../Assets_2/fonts/webfonts/borg9-webfont.eot');
+    src: url('../Assets_2/fonts/webfonts/borg9-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../Assets_2/fonts/webfonts/borg9-webfont.woff2') format('woff2'),
+         url('../Assets_2/fonts/webfonts/borg9-webfont.woff') format('woff'),
+         url('../Assets_2/fonts/webfonts/borg9-webfont.ttf') format('truetype'),
+         url('../Assets_2/fonts/webfonts/borg9-webfont.svg#borg_9regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'boronregular';
+    src: url('../Assets_2/fonts/webfonts/boron-webfont.eot');
+    src: url('../Assets_2/fonts/webfonts/boron-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../Assets_2/fonts/webfonts/boron-webfont.woff2') format('woff2'),
+         url('../Assets_2/fonts/webfonts/boron-webfont.woff') format('woff'),
+         url('../Assets_2/fonts/webfonts/boron-webfont.ttf') format('truetype'),
+         url('../Assets_2/fonts/webfonts/boron-webfont.svg#boronregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'dignity_of_labourregular';
+    src: url('../Assets_2/fonts/webfonts/dignity_of_labour-webfont.eot');
+    src: url('../Assets_2/fonts/webfonts/dignity_of_labour-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../Assets_2/fonts/webfonts/dignity_of_labour-webfont.woff2') format('woff2'),
+         url('../Assets_2/fonts/webfonts/dignity_of_labour-webfont.woff') format('woff'),
+         url('../Assets_2/fonts/webfonts/dignity_of_labour-webfont.ttf') format('truetype'),
+         url('../Assets_2/fonts/webfonts/dignity_of_labour-webfont.svg#dignity_of_labourregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
 body {
-    font-family:DianeDeFrance, Dock51;
+    font-family:DianeDeFrance, Dock51, 256_bytesregular, astron_boyregular, astron_boyvideo, astron_boywonder, borg_9regular, boronregular,dignity_of_labourregular, failed_attemptregular, minisystemregular,v_dubregular;
     background-color: darkgray;
 }
 

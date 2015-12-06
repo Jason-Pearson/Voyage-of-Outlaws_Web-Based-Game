@@ -9,7 +9,7 @@ var objects;
         __extends(Ocean, _super);
         //CONTRUCTOR
         function Ocean() {
-            _super.call(this, assets.getResult("Ocean")); // make a super call to the createjs.Bitmap class to hold the Ocean.png from the manifest in the assets variable (in game.ts)
+            _super.call(this, assets.getResult("Sand")); // make a super call to the createjs.Bitmap class to hold the Ocean.png from the manifest in the assets variable (in game.ts)
             //basically what would be called in the Start method
             this._dx = 5;
             this._reset();

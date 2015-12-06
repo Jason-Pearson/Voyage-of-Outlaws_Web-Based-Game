@@ -10,9 +10,9 @@ var objects;
         __extends(Barrel, _super);
         //CONTRUCTOR
         function Barrel() {
-            _super.call(this, "Barrel"); // makes a super call to the GameObject class, gives imageString value to refer to Barrel in the Atlus SpriteSheet variable
+            _super.call(this, "Pickup"); // makes a super call to the GameObject class, gives imageString value to refer to Barrel in the Atlus SpriteSheet variable
             //basically what would be called in the Start method
-            this._dx = 5;
+            this._dx = 10;
             this._reset();
         }
         //PUBLIC METHODS

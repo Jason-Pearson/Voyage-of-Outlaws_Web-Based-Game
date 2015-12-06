@@ -23,30 +23,57 @@ var atlas: createjs.SpriteSheet; // variable of type creatjs SpriteSheet to hold
 var data = {
 
     "images": [
-        "../../Assets/images/atlas.png"
+        "../../Assets_2/images/atlus.png"
     ],
 
     "frames": [
-        [2, 2, 118, 97, 0, -2, -3],
-        [122, 2, 150, 50, 0, 0, 0],
-        [274, 2, 150, 50, 0, 0, 0],
-        [122, 54, 150, 50, 0, 0, 0],
-        [274, 54, 94, 62, 0, 0, -3],
-        [370, 54, 30, 30, 0, -1, 0],
-        [402, 54, 30, 28, 0, -1, 0],
-        [402, 84, 30, 26, 0, -2, -2]
+        [2, 2, 1920, 480, 0, 0, 0],
+        [2, 484, 444, 344, 0, -23, -102],
+        [448, 484, 241, 164, 0, 0, 0],
+        [448, 650, 241, 122, 0, 0, 0],
+        [448, 774, 47, 39, 0, 0, 0],
+        [448, 815, 64, 13, 0, 0, 0],
+        [497, 774, 36, 39, 0, 0, 0],
+        [514, 815, 71, 11, 0, 0, 0],
+        [535, 774, 38, 38, 0, 0, 0],
+        [575, 774, 57, 29, 0, 0, 0],
+        [575, 805, 61, 8, 0, -1, -1],
+        [634, 774, 29, 29, 0, 0, 0],
+        [638, 805, 20, 20, 0, 0, 0],
+        [660, 805, 20, 20, 0, 0, 0],
+        [665, 774, 28, 28, 0, 0, 0],
+        [682, 804, 21, 17, 0, 0, 0],
+        [691, 484, 121, 82, 0, 0, 0],
+        [691, 568, 65, 66, 0, 0, 0],
+        [691, 636, 84, 58, 0, 0, 0],
+        [758, 568, 25, 25, 0, 0, 0],
+        [758, 595, 53, 8, 0, 0, 0]
     ],
 
     "animations": {
-        "Ship": [0],
-        "MenuButton": [1],
-        "RestartButton": [2],
-        "StartButton": [3],
-        "Leviathan": [4],
-        "cannonball": [5],
-        "Crate": [6],
-        "Barrel": [7]
+        "sand": [0],
+        "BeamsOriginal": [1],
+        "Spaceship_tut": [2],
+        "Spaceship_tut_thin": [3],
+        "AssaultboatB": [4],
+        "Blast": [5],
+        "Assaultboat": [6],
+        "blueBeam": [7],
+        "Box": [8],
+        "Fighter3": [9],
+        "redBeam": [10],
+        "Cross": [11],
+        "Pickup_2": [12],//red-out
+        "Pickup_3": [13],
+        "Box/Cross": [14],
+        "Blast2": [15],
+        "Spaceship_tut_small": [16],
+        "l0_SpaceShip0021": [17],
+        "Corvette": [18],
+        "Pickup": [19],
+        "cyanBeam": [20]
     }
+
 
 };
 
@@ -55,14 +82,19 @@ var manifest = [
     { id: "RestartButton", src: "../../Assets/images/RestartButton.png" },
     { id: "MenuButton", src: "../../Assets/images/MenuButton.png" },
     { id: "StartButton", src: "../../Assets/images/StartButton.png" },
-    { id: "Ocean", src: "../../Assets/images/ocean.png" },
+    { id: "Sand", src: "../../Assets_2/images/sand.jpg" },
     { id: "menu", src: "../../Assets/audio/menu1_music.mp3" },
     { id: "game", src: "../../Assets/audio/game1_music.mp3" },
     { id: "over", src: "../../Assets/audio/over1_music.mp3" },
     { id: "win", src: "../../Assets/audio/win_music.mp3" },
     { id: "cannon", src: "../../Assets/audio/shoot_cannon.wav" },
     { id: "damage", src: "../../Assets/audio/damage.wav" },
-    { id: "pickup1", src: "../../Assets/audio/pickup1.wav" }
+    { id: "over2", src: "../../Assets_2/audio/death/Falling.mp3" },
+    { id: "gun-piu", src: "../../Assets_2/audio/shots/gun-piu.wav" },
+    { id: "laser1", src: "../../Assets_2/audio/shots/laserfire01.ogg" },
+    { id: "laser2", src: "../../Assets_2/audio/shots/laserfire02.ogg" },
+    { id: "pickup", src: "../../Assets/audio/pickup1.wav" }
+
 ];
 
 function preload(): void {

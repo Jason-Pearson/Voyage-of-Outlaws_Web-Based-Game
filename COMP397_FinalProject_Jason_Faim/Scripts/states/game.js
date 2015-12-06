@@ -43,7 +43,7 @@ var states;
             //Instantiating Collision Managers
             this._collision = new managers.Collision;
             // Plundered Label
-            this._plunderedLabel = new objects.Label("Plundered: ", "40px " + config.FONT_FAMILY_DOCK, config.FONT_COLOR_YELLOW2, 5, 5, false);
+            this._plunderedLabel = new objects.Label("Score: ", "40px " + config.FONT_FAMILY_DOCK, config.FONT_COLOR_YELLOW2, 5, 5, false);
             this.addChild(this._plunderedLabel);
             // Lives Label
             this._livesLabel = new objects.Label("Lives: ", "40px " + config.FONT_FAMILY_DOCK, config.FONT_COLOR_YELLOW2, 450, 5, false);
@@ -67,9 +67,17 @@ var states;
             this._updateLabels();
             this._win();
             this._gameOver();
+            /*this.on("click", this.playerShot, this);
+            console.log(this.on("click", this.playerShot, this));*/
         };
+        /*private playerShot(): void {
+           this._playerShot = new objects.playerShot;
+           this.addChild(this._playerShot);
+           console.log(this.addChild(this._playerShot));
+           stage.addChild(this);
+       }*/
         Game.prototype._updateLabels = function () {
-            this._plunderedLabel.text = "Plundered: " + scoreboard.getBarrels();
+            this._plunderedLabel.text = "Score: " + scoreboard.getBarrels();
             this._livesLabel.text = "Lives: " + scoreboard.getLives();
         };
         Game.prototype._gameOver = function () {
@@ -79,7 +87,7 @@ var states;
             }
         };
         Game.prototype._win = function () {
-            if (scoreboard.getBarrels() >= 20) {
+            if (scoreboard.getBarrels() >= 200) {
                 createjs.Sound.stop(); // stop game music upon getting 20 barrels
                 changeState(config.WIN_STATE);
             }

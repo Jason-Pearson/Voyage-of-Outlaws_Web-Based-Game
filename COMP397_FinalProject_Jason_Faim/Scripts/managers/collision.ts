@@ -37,13 +37,13 @@
                 //Check if Ship is not ALREADY colliding - when it first enters collision (registers a hit), it is set to true only ONCE - the distance will be rechecked every frame, but not this collision when it is already true 
                 if (!object2.getIsColliding()) {
                     switch (object2.getName()) { // checks what other is via their tagName, and executes the code for the collision accordingly...
-                        case "Barrel": //if tag name is Barrel (pickup)
+                        case "Pickup": //if tag name is Barrel (pickup)
                             console.log("Hit Barrel");
-                            createjs.Sound.play("pickup1"); // play game music at Start - infinite loop (-1)
-                            scoreboard.addBarrels(1);
+                            createjs.Sound.play("pickup"); // play game music at Start - infinite loop (-1)
+                            scoreboard.addBarrels(10);
                             game._barrelReset(num);
                             break;
-                        case "Leviathan": // is tag name is Leviathan (enemy)
+                        case "Fighter3": // is tag name is Leviathan (enemy)
                             console.log("Hit Leviathan");
                             createjs.Sound.play("damage"); // play game music at Start - infinite loop (-1)
                             scoreboard.removeLives(1);

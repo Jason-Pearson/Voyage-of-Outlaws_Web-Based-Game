@@ -21,11 +21,11 @@
             this.addChild(this._ocean);
 
             // level label
-            this._gameOverLabel = new objects.Label("Expedition Failed", "150px " + config.FONT_FAMILY_DIANE, config.FONT_COLOR_RED, 305, 180, true);
+            this._gameOverLabel = new objects.Label("Escape Failed", "150px " + config.FONT_FAMILY_DIANE, config.FONT_COLOR_RED, 305, 180, true);
             this.addChild(this._gameOverLabel); // add label to the stage
 
             //  plundered
-            this._finalPlunderedLabel = new objects.Label("Plundered: " + scoreboard._barrels + "/20", "40px " + config.FONT_FAMILY_DOCK, config.FONT_COLOR_RED, 320, 240, true);
+            this._finalPlunderedLabel = new objects.Label("Score: " + scoreboard._barrels + "/200", "40px " + config.FONT_FAMILY_DOCK, config.FONT_COLOR_RED, 320, 240, true);
             this.addChild(this._finalPlunderedLabel); // add label to the stage
 
             // restart button

@@ -6,10 +6,10 @@
 
         //CONTRUCTOR
         constructor() {
-            super("Barrel"); // makes a super call to the GameObject class, gives imageString value to refer to Barrel in the Atlus SpriteSheet variable
+            super("Pickup"); // makes a super call to the GameObject class, gives imageString value to refer to Barrel in the Atlus SpriteSheet variable
 
             //basically what would be called in the Start method
-            this._dx = 5;
+            this._dx = 10;
             this._reset();
 
         }

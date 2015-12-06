@@ -18,12 +18,14 @@ var states;
             this._ocean = new objects.Ocean();
             this.addChild(this._ocean);
             // hello label
-            this._gameTitleLabel = new objects.Label("Ocean of Leviathans", "150px " + config.FONT_FAMILY_DIANE, config.FONT_COLOR_YELLOW1, 320, 180, true); //Change font and color
+            this._gameTitleLabel = new objects.Label("Voyage of Outlaws", "150px " + config.FONT_FAMILY_DIANE, config.FONT_COLOR_YELLOW1, 320, 180, true); //Change font and color
             this.addChild(this._gameTitleLabel); // add label to the stage
-            this._intructLabel = new objects.Label("Move the mouse up and down to move ship", "20px " + config.FONT_FAMILY_DOCK, config.FONT_COLOR_YELLOW1, 320, 220, true); //Change font and color
+            this._intructLabel = new objects.Label("Move the mouse up and down to move ship", "20px " + config.FONT_FAMILY_DOCK, config.FONT_COLOR_YELLOW1, 110, 220, false); //Change font and color
             this.addChild(this._intructLabel); // add label to the stage
-            this._intructLabel2 = new objects.Label("Attain 20 barrels of loose treasure and become a legend!", "20px " + config.FONT_FAMILY_DOCK, config.FONT_COLOR_YELLOW1, 320, 250, true); //Change font and color
+            this._intructLabel2 = new objects.Label("Attain enough Fusion Cores to warp", "20px " + config.FONT_FAMILY_DOCK, config.FONT_COLOR_YELLOW1, 130, 270, false); //Change font and color
             this.addChild(this._intructLabel2); // add label to the stage
+            this._intructLabel3 = new objects.Label("through Galactic Federacy Space and escape captivity!", "20px " + config.FONT_FAMILY_DOCK, config.FONT_COLOR_YELLOW1, 30, 300, false); //Change font and color
+            this.addChild(this._intructLabel3); // add label to the stage
             // start button
             this._startButton = new objects.Button("StartButton", 320, 400);
             this._startButton.on("click", this._clickStartButton, this); // event listener

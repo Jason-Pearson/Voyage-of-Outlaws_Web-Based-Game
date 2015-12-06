@@ -10,7 +10,7 @@ var objects;
         __extends(Ship, _super);
         // COSNTRUCTOR
         function Ship() {
-            _super.call(this, "Ship"); // makes a super call to the GameObject class, gives imageString value to refer to Ship in the Atlus SpriteSheet variable
+            _super.call(this, "l0_SpaceShip0021"); // makes a super call to the GameObject class, gives imageString value to refer to Ship in the Atlus SpriteSheet variable
             this.x = 60; // set the Ship gameobject at a specific point on the canvas from the Start
         }
         //Below is a Method Definition for better Code-Hinting
@@ -19,6 +19,15 @@ var objects;
          */
         Ship.prototype.update = function () {
             this.y = stage.mouseY; //every frame, update the y-position of the Ship affixed to the mouse's y-position
+            this._checkBounds();
+        };
+        Ship.prototype._checkBounds = function () {
+            if (this.y >= 430) {
+                this.y = 430;
+            }
+            else if (this.y <= 40) {
+                this.y = 40;
+            }
         };
         return Ship;
     })(objects.GameObject);

@@ -8,6 +8,16 @@ var config;
     // Font Constants
     config.FONT_FAMILY_DIANE = "DianeDeFrance";
     config.FONT_FAMILY_DOCK = "Dock51";
+    config.FONT_FAMILY_1 = "minisystemregular";
+    config.FONT_FAMILY_2 = "failed_attemptregular";
+    config.FONT_FAMILY_3 = "v_dubregular";
+    config.FONT_FAMILY_4 = "256_bytesregular";
+    config.FONT_FAMILY_5 = "astron_boyvideo";
+    config.FONT_FAMILY_6 = "astron_boywonder";
+    config.FONT_FAMILY_7 = "astron_boyregular";
+    config.FONT_FAMILY_8 = "borg_9regular";
+    config.FONT_FAMILY_9 = "boronregular";
+    config.FONT_FAMILY_10 = "dignity_of_labourregular";
     config.FONT_COLOR_RED = "#FF2B46"; //red - over state
     config.FONT_COLOR_YELLOW1 = "#FFCB35"; // yellow - menu state
     config.FONT_COLOR_YELLOW2 = "#FFFF00"; //yellow - game state
