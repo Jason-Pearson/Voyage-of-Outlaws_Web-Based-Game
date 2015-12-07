@@ -4,3 +4,9 @@ C:\Users\Jason\Documents\Year_2\COMP397 - 001 - Web Game Programming\_Assignment
 C:\Users\Jason\Documents\Year_2\COMP397 - 001 - Web Game Programming\_Assignments\COMP397_FinalProject_Jason_Faim\COMP397_FinalProject_Jason_Faim\obj\Debug\COMP397_FinalProject_Jason_Faim.csprojResolveAssemblyReference.cache
 C:\Users\Jason\Documents\Year_2\COMP397 - 001 - Web Game Programming\_Assignments\COMP397_FinalProject_Jason_Faim\COMP397_FinalProject_Jason_Faim\obj\Debug\COMP397-Lesson2.dll
 C:\Users\Jason\Documents\Year_2\COMP397 - 001 - Web Game Programming\_Assignments\COMP397_FinalProject_Jason_Faim\COMP397_FinalProject_Jason_Faim\obj\Debug\COMP397-Lesson2.pdb
+C:\Users\Faim\Desktop\COMP397_FinalProject_Jason_Faim\COMP397_FinalProject_Jason_Faim\bin\COMP397-Lesson2.dll.config
+C:\Users\Faim\Desktop\COMP397_FinalProject_Jason_Faim\COMP397_FinalProject_Jason_Faim\bin\COMP397-Lesson2.dll
+C:\Users\Faim\Desktop\COMP397_FinalProject_Jason_Faim\COMP397_FinalProject_Jason_Faim\bin\COMP397-Lesson2.pdb
+C:\Users\Faim\Desktop\COMP397_FinalProject_Jason_Faim\COMP397_FinalProject_Jason_Faim\obj\Debug\COMP397_FinalProject_Jason_Faim.csprojResolveAssemblyReference.cache
+C:\Users\Faim\Desktop\COMP397_FinalProject_Jason_Faim\COMP397_FinalProject_Jason_Faim\obj\Debug\COMP397-Lesson2.dll
+C:\Users\Faim\Desktop\COMP397_FinalProject_Jason_Faim\COMP397_FinalProject_Jason_Faim\obj\Debug\COMP397-Lesson2.pdb

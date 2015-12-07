@@ -1,4 +1,11 @@
-﻿module config {
+﻿/*
+    File:               config.ts
+    Author:             Jason Pearson
+    Date Modified:      12/5/2015
+    Description:        Cobfig (TypeScript)
+    Revision History:   IDK...
+*/
+module config {
 
     // State Constants
     export var MENU_STATE: number = 0;

@@ -1,4 +1,11 @@
-﻿@font-face {
+﻿/*
+    File:               game.css
+    Author:             Jason Pearson
+    Date Modified:      12/5/2015
+    Description:        Main stylesheet
+    Revision History:   IDK...
+*/
+@font-face {
     font-family: 'DianeDeFrance';
     src: url('../Assets/fonts/diane_de_france-webfont.eot');
     src: url('../Assets/fonts/diane_de_france-webfont.eot?#iefix') format('embedded-opentype'),
@@ -179,20 +186,24 @@
     font-style: normal;
 
 }
-body {
+
+body 
+{
     font-family:DianeDeFrance, Dock51, 256_bytesregular, astron_boyregular, astron_boyvideo, astron_boywonder, borg_9regular, boronregular,dignity_of_labourregular, failed_attemptregular, minisystemregular,v_dubregular;
-    background-color: darkgray;
+    background-color: black;
 }
 
-canvas {
-    border: 1px solid black;
+canvas 
+{
+    background-color: silver;
+    border: 1px solid blue;
     border-radius: 10px;
     text-align: center;
-    margin-left: 10%;
-    background-color: white;
+    margin-left: 20%;
 }
 
-.game {
+.game 
+{
     width: 80%;
     margin: 0 auto;
 }
