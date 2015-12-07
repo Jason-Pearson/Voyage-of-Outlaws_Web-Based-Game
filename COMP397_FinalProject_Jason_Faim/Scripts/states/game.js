@@ -17,9 +17,11 @@ var states;
         // PUBLIC METHODS
         Game.prototype.start = function () {
             scoreboard.setLives(5);
-            scoreboard.setBarrels(0);
+            scoreboard.setScore(0);
+            scoreboard.setCores(0);
             console.log(scoreboard.getLives());
-            console.log(scoreboard.getBarrels());
+            console.log(scoreboard.getScore());
+            console.log(scoreboard.getCores());
             //Add Ocean to Game Scene at Start
             this._ocean = new objects.Ocean();
             this.addChild(this._ocean);
@@ -40,16 +42,22 @@ var states;
                 //this._enemies[enemy].setName(this._enemies[enemy]._tagName);
                 this.addChild(this._enemies[enemy]);
             }
+            //Add a Fusion Core
+            this._fusionCore = new objects.fcore();
+            this.addChild(this._fusionCore);
             //Instantiating Collision Managers
             this._collision = new managers.Collision;
-            // Plundered Label
-            this._plunderedLabel = new objects.Label("Score: ", "40px " + config.FONT_FAMILY_DOCK, config.FONT_COLOR_YELLOW2, 5, 5, false);
-            this.addChild(this._plunderedLabel);
+            // Score Label
+            this._scoreLabel = new objects.Label("Score: ", "40px " + config.FONT_FAMILY_DOCK, config.FONT_COLOR_YELLOW2, 5, 5, false);
+            this.addChild(this._scoreLabel);
             // Lives Label
             this._livesLabel = new objects.Label("Lives: ", "40px " + config.FONT_FAMILY_DOCK, config.FONT_COLOR_YELLOW2, 450, 5, false);
             this.addChild(this._livesLabel);
+            // Core Label
+            this._coreLabel = new objects.Label("Fusion Cores: ", "40px " + config.FONT_FAMILY_DOCK, config.FONT_COLOR_YELLOW2, 5, 450, false);
+            this.addChild(this._coreLabel);
             stage.addChild(this);
-            createjs.Sound.play("game", { loop: -1, volume: 0.5, delay: 100 }); // play game music at Start - infinite loop (-1)
+            createjs.Sound.play("game", { loop: -1, volume: 0.3, delay: 100 }); // play game music at Start - infinite loop (-1)
         };
         //GAME OVER METHOD - Lives reach 0 - stop music, save score, change state
         //GAME SCENE UPDATE METHOD
@@ -59,6 +67,8 @@ var states;
                 this._barrels[barrel].update();
                 this._collision.update(this._ship, this._barrels[barrel], barrel); // every frame, check collision between Ship and each Barrel
             }
+            this._fusionCore.update();
+            this._collision.update(this._ship, this._fusionCore, 1);
             this._ship.update(); // every frame, call the update method of Ship class in order to move
             for (var enemy = 0; enemy < 5; enemy++) {
                 this._enemies[enemy].update();
@@ -77,8 +87,9 @@ var states;
            stage.addChild(this);
        }*/
         Game.prototype._updateLabels = function () {
-            this._plunderedLabel.text = "Score: " + scoreboard.getBarrels();
+            this._scoreLabel.text = "Score: " + scoreboard.getScore();
             this._livesLabel.text = "Lives: " + scoreboard.getLives();
+            this._coreLabel.text = "Fusion Cores: " + scoreboard.getCores() + "/10";
         };
         Game.prototype._gameOver = function () {
             if (scoreboard.getLives() == 0) {
@@ -87,7 +98,7 @@ var states;
             }
         };
         Game.prototype._win = function () {
-            if (scoreboard.getBarrels() >= 200) {
+            if (scoreboard.getCores() >= 10) {
                 createjs.Sound.stop(); // stop game music upon getting 20 barrels
                 changeState(config.WIN_STATE);
             }
@@ -100,6 +111,9 @@ var states;
         };
         Game.prototype._enemyReset = function (enemy) {
             this._enemies[enemy]._reset();
+        };
+        Game.prototype._coreReset = function () {
+            this._fusionCore._reset();
         };
         return Game;
     })(objects.Scene);

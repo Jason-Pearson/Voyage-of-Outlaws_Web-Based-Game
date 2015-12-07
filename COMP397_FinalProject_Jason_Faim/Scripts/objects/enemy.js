@@ -28,9 +28,9 @@ var objects;
          */
         Enemy.prototype._reset = function () {
             //this._dy = Math.floor(Math.random() * 4) - 2; // vertical drift
-            this._dx = Math.floor(Math.random() * 10) + 5; // horizontal speed
+            this._dx = Math.floor(Math.random() * 13) + 7; // horizontal speed
             this.y = Math.floor(Math.random() * (480 - this._height)) + (this._height * 0.5); // the entire height of the sprite image will be within view of the canvas while randomely resetting, but the verticle drift will make that irrelevant
-            this.x = 640 + this._width; // reset just before the canvas via the full width of the sprite image, for better transitioning into the scene
+            this.x = Math.floor(Math.random() * 800) + (640 + this._width); // reset just before the canvas via the full width of the sprite image, for better transitioning into the scene
         };
         /**
          * Checks if Enemy needs to Reset after scrolling beyond the canvas via the entire width of the enemy sprite (better transitioning for resetting)

@@ -8,17 +8,23 @@ var managers;
         function ScoreBoard() {
         }
         // PUBLIC PROPERTIES
-        ScoreBoard.prototype.setBarrels = function (value) {
-            this._barrels = value;
+        ScoreBoard.prototype.setScore = function (value) {
+            this._score = value;
         };
-        ScoreBoard.prototype.getBarrels = function () {
-            return this._barrels;
+        ScoreBoard.prototype.getScore = function () {
+            return this._score;
         };
         ScoreBoard.prototype.setLives = function (value) {
             this._lives = value;
         };
         ScoreBoard.prototype.getLives = function () {
             return this._lives;
+        };
+        ScoreBoard.prototype.setCores = function (value) {
+            this._cores = value;
+        };
+        ScoreBoard.prototype.getCores = function () {
+            return this._cores;
         };
         // PUBLIC METHODS
         /**
@@ -29,8 +35,8 @@ var managers;
         /**
          * AddScore method - adds points to the _score
          */
-        ScoreBoard.prototype.addBarrels = function (plundered) {
-            this._barrels += plundered;
+        ScoreBoard.prototype.addScore = function (score) {
+            this._score += score;
         };
         /**
          * AddLives method - adds lives to the _lives
@@ -43,6 +49,15 @@ var managers;
          */
         ScoreBoard.prototype.removeLives = function (lives) {
             this._lives -= lives;
+        };
+        ScoreBoard.prototype.addCores = function (cores) {
+            this._cores += cores;
+        };
+        /**
+         * RemoveLives method - removes lives from  _lives
+         */
+        ScoreBoard.prototype.removeCores = function (cores) {
+            this._cores -= cores;
         };
         return ScoreBoard;
     })();

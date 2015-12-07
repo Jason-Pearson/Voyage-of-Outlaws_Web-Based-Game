@@ -14,6 +14,7 @@
 /// <reference path="../objects/ship.ts" />
 /// <reference path="../objects/enemy.ts" />
 /// <reference path="../objects/barrel.ts" />
+/// <reference path="../objects/fcore.ts" />
 /// <reference path="../objects/ocean.ts" />
 /// <reference path="../objects/scene.ts" />
 /// <reference path="../states/win.ts" />

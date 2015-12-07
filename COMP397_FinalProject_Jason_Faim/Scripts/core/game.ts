@@ -1,6 +1,5 @@
 ﻿/// <reference path="reference.ts" />
 
-
 // GLOBAL GAME FRAMEWORK VARIABLES
 var assets: createjs.LoadQueue;
 var canvas: HTMLElement;
@@ -83,17 +82,18 @@ var manifest = [
     { id: "MenuButton", src: "../../Assets/images/MenuButton.png" },
     { id: "StartButton", src: "../../Assets/images/StartButton.png" },
     { id: "Sand", src: "../../Assets_2/images/sand.jpg" },
-    { id: "menu", src: "../../Assets/audio/menu1_music.mp3" },
-    { id: "game", src: "../../Assets/audio/game1_music.mp3" },
-    { id: "over", src: "../../Assets/audio/over1_music.mp3" },
-    { id: "win", src: "../../Assets/audio/win_music.mp3" },
+    { id: "menu", src: "../../Assets/audio/menu2_music.mp3" },
+    { id: "game", src: "../../Assets/audio/game2_music.mp3" },
+    { id: "over", src: "../../Assets/audio/over2_music.mp3" },
+    { id: "win", src: "../../Assets/audio/win2_music.mp3" },
     { id: "cannon", src: "../../Assets/audio/shoot_cannon.wav" },
     { id: "damage", src: "../../Assets/audio/damage.wav" },
     { id: "over2", src: "../../Assets_2/audio/death/Falling.mp3" },
     { id: "gun-piu", src: "../../Assets_2/audio/shots/gun-piu.wav" },
     { id: "laser1", src: "../../Assets_2/audio/shots/laserfire01.ogg" },
     { id: "laser2", src: "../../Assets_2/audio/shots/laserfire02.ogg" },
-    { id: "pickup", src: "../../Assets/audio/pickup1.wav" }
+    { id: "pickup", src: "../../Assets/audio/pickup1.wav" },
+    { id: "pickup2", src: "../../Assets_2/audio/pickups/Bonus 1.wav" }
 
 ];
 

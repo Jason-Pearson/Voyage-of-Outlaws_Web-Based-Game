@@ -3,13 +3,15 @@
     export class Game extends objects.Scene {
         // PRIVATE INSTANCE VARIABLES
         public _ship: objects.Ship; // reference of type Ship class - holds Ship gameobject, along with class properties to control behaviour/user input
-        private _barrels: objects.Barrel[] =[]; // referene of type Barrel class - holds Barrel gameobject, along with class properties to control spawning and scoring
+        private _fusionCore: objects.fcore;
+        private _barrels: objects.Barrel[] = []; // referene of type Barrel class - holds Barrel gameobject, along with class properties to control spawning and scoring
         private _enemies: objects.Enemy[] = []; // referene of type Enemy class - holds Enemy gameobject, along with class properties to control spawning, AI movement, player interaction
         private _ocean: objects.Ocean; // reference of type Ocean class - holds Ocean bitmap, along with class properties to control constant scrolling
         private _collision: managers.Collision;
-        private _plunderedLabel: objects.Label;
+        private _scoreLabel: objects.Label;
+        private _coreLabel: objects.Label;
         private _livesLabel: objects.Label;
-        private _playerShot: objects.playerShot;
+        //private _playerShot: objects.playerShot;
 
         public finalBarrels: number;
         // CONSTRUCTOR
@@ -21,9 +23,11 @@
         public start(): void {
 
             scoreboard.setLives(5);
-            scoreboard.setBarrels(0);
+            scoreboard.setScore(0);
+            scoreboard.setCores(0);
             console.log(scoreboard.getLives());
-            console.log(scoreboard.getBarrels());
+            console.log(scoreboard.getScore());
+            console.log(scoreboard.getCores());
 
             //Add Ocean to Game Scene at Start
             this._ocean = new objects.Ocean();
@@ -49,22 +53,28 @@
                 //this._enemies[enemy].setName(this._enemies[enemy]._tagName);
                 this.addChild(this._enemies[enemy]);
             }
-            
+            //Add a Fusion Core
+            this._fusionCore = new objects.fcore();
+            this.addChild(this._fusionCore);
+
             //Instantiating Collision Managers
             this._collision = new managers.Collision;
 
-            // Plundered Label
-            this._plunderedLabel = new objects.Label("Score: ", "40px " + config.FONT_FAMILY_DOCK, config.FONT_COLOR_YELLOW2, 5, 5, false);
-            this.addChild(this._plunderedLabel);
+            // Score Label
+            this._scoreLabel = new objects.Label("Score: ", "40px " + config.FONT_FAMILY_DOCK, config.FONT_COLOR_YELLOW2, 5, 5, false);
+            this.addChild(this._scoreLabel);
             
             // Lives Label
             this._livesLabel = new objects.Label("Lives: ", "40px " + config.FONT_FAMILY_DOCK, config.FONT_COLOR_YELLOW2, 450, 5, false);
             this.addChild(this._livesLabel);
 
-            
+            // Core Label
+            this._coreLabel = new objects.Label("Fusion Cores: ", "40px " + config.FONT_FAMILY_DOCK, config.FONT_COLOR_YELLOW2, 5, 450, false);
+            this.addChild(this._coreLabel);
+
             stage.addChild(this);
 
-            createjs.Sound.play("game", { loop: -1, volume: 0.5, delay: 100 }); // play game music at Start - infinite loop (-1)
+            createjs.Sound.play("game", { loop: -1, volume: 0.3, delay: 100 }); // play game music at Start - infinite loop (-1)
         }        
         //GAME OVER METHOD - Lives reach 0 - stop music, save score, change state
 
@@ -75,6 +85,8 @@
                 this._barrels[barrel].update();
                 this._collision.update(this._ship, this._barrels[barrel], barrel)// every frame, check collision between Ship and each Barrel
             }
+            this._fusionCore.update();
+            this._collision.update(this._ship, this._fusionCore, 1);
             this._ship.update(); // every frame, call the update method of Ship class in order to move
             for (var enemy = 0; enemy < 5; enemy++) {// every frame, call the update method of Enemy class of All Enemies in order to spawn and drift
                 this._enemies[enemy].update();
@@ -97,8 +109,9 @@
         }*/
 
         private _updateLabels(): void {
-            this._plunderedLabel.text = "Score: " + scoreboard.getBarrels();
+            this._scoreLabel.text = "Score: " + scoreboard.getScore();
             this._livesLabel.text = "Lives: " + scoreboard.getLives();
+            this._coreLabel.text = "Fusion Cores: " + scoreboard.getCores() + "/10";
         }
 
         private _gameOver(): void {
@@ -109,7 +122,7 @@
         }
 
         private _win(): void {
-            if (scoreboard.getBarrels() >= 200) {
+            if (scoreboard.getCores() >= 10) {
                 createjs.Sound.stop(); // stop game music upon getting 20 barrels
                 changeState(config.WIN_STATE);
             }
@@ -123,6 +136,10 @@
         }
         public _enemyReset(enemy: number): void {
             this._enemies[enemy]._reset();
+        }
+
+        public _coreReset(): void {
+            this._fusionCore._reset();
         }
     }
 

@@ -40,7 +40,7 @@
                         case "Pickup": //if tag name is Barrel (pickup)
                             console.log("Hit Barrel");
                             createjs.Sound.play("pickup"); // play game music at Start - infinite loop (-1)
-                            scoreboard.addBarrels(10);
+                            scoreboard.addScore(10);
                             game._barrelReset(num);
                             break;
                         case "Fighter3": // is tag name is Leviathan (enemy)
@@ -49,6 +49,11 @@
                             scoreboard.removeLives(1);
                             game._enemyReset(num);
                             break;
+                        case "Box":
+                            console.log("Got Fusion Core");
+                            createjs.Sound.play("pickup2"); // play game music at Start - infinite loop (-1)
+                            scoreboard.addCores(1);
+                            game._coreReset();
                     }
                     object2.setIsColliding(true); // if it is currently colliding, then IsColliding is set and remains True
                 }

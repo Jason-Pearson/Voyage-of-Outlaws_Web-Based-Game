@@ -2,16 +2,16 @@
 	// Scoreboard class +++++++++++++++++++++++++++++++++++
 	export class ScoreBoard {
 		// PRIVATE INSTANCE VARIABLES
-		public _barrels:number; // hold the number of barrels plundered
+		public _score:number; // hold the number of barrels plundered
 		private _lives:number; // hold the number of lives the player/ship has
-		
+        public _cores: number;
 		// PUBLIC PROPERTIES
-		public setBarrels(value:number):void {
-			this._barrels = value;
+		public setScore(value:number):void {
+			this._score = value;
 		}
 		
-		public getBarrels():number {
-			return this._barrels;
+		public getScore():number {
+			return this._score;
 		}
 		
 		public setLives(value:number):void {
@@ -22,6 +22,13 @@
 			return this._lives;
 		}
 		
+        public setCores(value: number): void {
+            this._cores = value;
+        }
+
+        public getCores(): number {
+            return this._cores;
+        }
 		/**
 		 * Empty Constructor
 		 */
@@ -40,8 +47,8 @@
 		/**
 		 * AddScore method - adds points to the _score
 		 */
-        public addBarrels(plundered: number): void {
-            this._barrels += plundered;
+        public addScore(score: number): void {
+            this._score += score;
         }
 		
 		/**
@@ -56,6 +63,17 @@
 		 */
         public removeLives(lives: number): void {
             this._lives -= lives;
+        }
+
+        public addCores(cores: number): void {
+            this._cores += cores;
+        }
+		
+		/**
+		 * RemoveLives method - removes lives from  _lives
+		 */
+        public removeCores(cores: number): void {
+            this._cores -= cores;
         }
      }
  }

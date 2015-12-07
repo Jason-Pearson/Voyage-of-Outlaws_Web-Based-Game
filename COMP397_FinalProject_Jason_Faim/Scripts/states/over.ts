@@ -6,7 +6,7 @@
         private _restartButton: objects.Button;
         private _ocean: objects.Ocean; // reference of type Ocean class - holds Ocean bitmap, along with class properties to control constant scrolling
 
-        private _finalPlunderedLabel: objects.Label;
+        private _finalScoreLabel: objects.Label;
 
         // CONSTRUCTOR
         constructor() {
@@ -25,8 +25,12 @@
             this.addChild(this._gameOverLabel); // add label to the stage
 
             //  plundered
-            this._finalPlunderedLabel = new objects.Label("Score: " + scoreboard._barrels + "/200", "40px " + config.FONT_FAMILY_DOCK, config.FONT_COLOR_RED, 320, 240, true);
-            this.addChild(this._finalPlunderedLabel); // add label to the stage
+            this._finalScoreLabel = new objects.Label("Score: " + scoreboard._score, "40px " + config.FONT_FAMILY_DOCK, config.FONT_COLOR_RED, 320, 240, true);
+            this.addChild(this._finalScoreLabel); // add label to the stage
+
+            //  plundered
+            this._finalScoreLabel = new objects.Label("Fusion Cores: " + scoreboard._cores + "/10", "40px " + config.FONT_FAMILY_DOCK, config.FONT_COLOR_RED, 320, 290, true);
+            this.addChild(this._finalScoreLabel); // add label to the stage
 
             // restart button
             this._restartButton = new objects.Button("RestartButton", 320, 400);
