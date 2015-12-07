@@ -3,6 +3,13 @@ var __extends = (this && this.__extends) || function (d, b) {
     function __() { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
+/*
+    File:               game.ts
+    Author:             Khandker Hussain
+    Date Modified:      12/6/2015
+    Description:        Game's scene
+    Revision History:   IDK...
+*/
 var states;
 (function (states) {
     // GAME CLASS
@@ -35,6 +42,9 @@ var states;
             //Add Ship to Game Scene at Start
             this._ship = new objects.Ship();
             this.addChild(this._ship);
+            //Add playerShot to Game Scene at start
+            this._blastShot = new objects.playerShot();
+            this.addChild(this._blastShot);
             //Add Enemies to Game Scene at Start
             for (var enemy = 0; enemy < 5; enemy++) {
                 this._enemies[enemy] = new objects.Enemy();
@@ -80,7 +90,8 @@ var states;
             /*this.on("click", this.playerShot, this);
             console.log(this.on("click", this.playerShot, this));*/
         };
-        /*private playerShot(): void {
+        /*private playerShot(): void
+       {
            this._playerShot = new objects.playerShot;
            this.addChild(this._playerShot);
            console.log(this.addChild(this._playerShot));
@@ -102,7 +113,8 @@ var states;
                 createjs.Sound.stop(); // stop game music upon getting 20 barrels
                 changeState(config.WIN_STATE);
             }
-            /*if (scoreboard._barrels / 5 == 1) {
+            /*if (scoreboard._barrels / 5 == 1)
+            {
                 scoreboard.addLives(1);
             }*/
         };

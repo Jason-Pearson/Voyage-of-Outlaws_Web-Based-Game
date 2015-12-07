@@ -1,4 +1,11 @@
-﻿module states {
+﻿/*
+    File:               win.ts
+    Author:             Jason Pearson
+    Date Modified:      12/5/2015
+    Description:        Win's scene
+    Revision History:   IDK...
+*/
+module states {
     // WIN CLASS
     export class Win extends objects.Scene {
         // PRIVATE INSTANCE VARIABLES

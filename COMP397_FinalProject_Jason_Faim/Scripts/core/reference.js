@@ -1,3 +1,10 @@
+/*
+    File:               reference.ts
+    Author:             Jason Pearson
+    Date Modified:      12/5/2015
+    Description:        All of game.ts's reference paths are located here
+    Revision History:   IDK...
+*/
 /// <reference path="../config/config.ts" />
 /// <reference path="../typings/jquery/jquery.d.ts" />
 /// <reference path="../typings/stats/stats.d.ts" />
@@ -12,6 +19,7 @@
 /// <reference path="../objects/label.ts" />
 /// <reference path="../objects/button.ts" />
 /// <reference path="../objects/ship.ts" />
+/// <reference path="../objects/playershot.ts" />
 /// <reference path="../objects/enemy.ts" />
 /// <reference path="../objects/barrel.ts" />
 /// <reference path="../objects/fcore.ts" />

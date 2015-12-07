@@ -1,4 +1,11 @@
-﻿module states {
+﻿/*
+    File:               over.ts
+    Author:             Jason Pearson
+    Date Modified:      12/5/2015
+    Description:        Over's scene
+    Revision History:   IDK...
+*/
+module states {
     // OVER CLASS
     export class Over extends objects.Scene {
         // PRIVATE INSTANCE VARIABLES

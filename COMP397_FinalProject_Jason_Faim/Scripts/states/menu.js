@@ -3,6 +3,13 @@ var __extends = (this && this.__extends) || function (d, b) {
     function __() { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
+/*
+    File:               game.ts
+    Author:             Jason Pearson
+    Date Modified:      12/5/2015
+    Description:        Game's scene
+    Revision History:   IDK...
+*/
 var states;
 (function (states) {
     // MENU CLASS

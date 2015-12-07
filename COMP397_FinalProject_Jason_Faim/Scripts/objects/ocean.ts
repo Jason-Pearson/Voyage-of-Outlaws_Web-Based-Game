@@ -1,4 +1,11 @@
-﻿module objects {
+﻿/*
+    File:               ocean.ts
+    Author:             Jason Pearson
+    Date Modified:      12/5/2015
+    Description:        ...
+    Revision History:   IDK...
+*/
+module objects {
     export class Ocean extends createjs.Bitmap { // Ocean class/controller - extends to createjs.Bitmap in order to reference the Ocean.png as a Bitmap throughout this class
         //PRIVATE INSTANCE VARIABLES
         private _dx: number; // the speed on the x-axis to which the Ocean will scroll

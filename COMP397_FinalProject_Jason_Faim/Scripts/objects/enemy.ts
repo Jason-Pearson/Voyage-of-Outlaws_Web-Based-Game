@@ -1,4 +1,11 @@
-﻿module objects {
+﻿/*
+    File:               enemy.ts
+    Author:             Jason Pearson
+    Date Modified:      12/5/2015
+    Description:        Game's scene
+    Revision History:   IDK...
+*/
+module objects {
     export class Enemy extends objects.GameObject { // Enemy class/controller - extends to objects.Gameobject, making a variable of this type holding the Barrel sprite/gameobject
         //PRIVATE INSTANCE VARIABLES
         private _dx: number; // the speed on the x-axis to which the Enemy will scroll

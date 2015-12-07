@@ -1,4 +1,11 @@
-﻿module states {
+﻿/*
+    File:               game.ts
+    Author:             Jason Pearson
+    Date Modified:      12/5/2015
+    Description:        Game's scene
+    Revision History:   IDK...
+*/
+module states {
     // MENU CLASS
     export class Menu extends objects.Scene {
         // PRIVATE INSTANCE VARIABLES

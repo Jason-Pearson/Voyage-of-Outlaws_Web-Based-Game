@@ -1,4 +1,11 @@
-﻿/// <reference path="reference.ts" />
+﻿/*
+    File:               game.ts
+    Author:             Jason Pearson
+    Date Modified:      12/5/2015
+    Description:        Main game TypeScript
+    Revision History:   IDK...
+*/
+/// <reference path="reference.ts" />
 
 // GLOBAL GAME FRAMEWORK VARIABLES
 var assets: createjs.LoadQueue;
@@ -72,8 +79,6 @@ var data = {
         "Pickup": [19],
         "cyanBeam": [20]
     }
-
-
 };
 
 // manifest of all our assets
@@ -94,7 +99,6 @@ var manifest = [
     { id: "laser2", src: "../../Assets_2/audio/shots/laserfire02.ogg" },
     { id: "pickup", src: "../../Assets/audio/pickup1.wav" },
     { id: "pickup2", src: "../../Assets_2/audio/pickups/Bonus 1.wav" }
-
 ];
 
 function preload(): void {

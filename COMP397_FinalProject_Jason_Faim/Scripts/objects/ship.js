@@ -3,6 +3,13 @@ var __extends = (this && this.__extends) || function (d, b) {
     function __() { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
+/*
+    File:               ship.ts
+    Author:             Jason Pearson
+    Date Modified:      12/5/2015
+    Description:        ...
+    Revision History:   IDK...
+*/
 var objects;
 (function (objects) {
     //Ship Class - to create the Ship gameobject, making a variable of this type holding the Ship sprite/gameobject
@@ -15,7 +22,7 @@ var objects;
         }
         //Below is a Method Definition for better Code-Hinting
         /**
-         * Update Method for Plane Class
+         * Update Method for Ship Class
          */
         Ship.prototype.update = function () {
             this.y = stage.mouseY; //every frame, update the y-position of the Ship affixed to the mouse's y-position

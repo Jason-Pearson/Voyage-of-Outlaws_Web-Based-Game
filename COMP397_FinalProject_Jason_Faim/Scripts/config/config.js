@@ -1,3 +1,10 @@
+/*
+    File:               config.ts
+    Author:             Jason Pearson
+    Date Modified:      12/5/2015
+    Description:        Cobfig (TypeScript)
+    Revision History:   IDK...
+*/
 var config;
 (function (config) {
     // State Constants

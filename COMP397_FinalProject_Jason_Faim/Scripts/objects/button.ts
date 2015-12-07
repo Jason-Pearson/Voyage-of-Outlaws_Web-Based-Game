@@ -1,4 +1,11 @@
-﻿module objects {
+﻿/*
+    File:               button.ts
+    Author:             Jason Pearson
+    Date Modified:      12/5/2015
+    Description:        Class in charge of instantiating buttons
+    Revision History:   IDK...
+*/
+module objects {
     export class Button extends createjs.Bitmap {
         //PRIVATE INSTANCE VARIABLES
         width: number;

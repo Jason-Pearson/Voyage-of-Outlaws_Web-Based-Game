@@ -1,3 +1,10 @@
+/*
+    File:               game.ts
+    Author:             Jason Pearson
+    Date Modified:      12/5/2015
+    Description:        Main game TypeScript
+    Revision History:   IDK...
+*/
 /// <reference path="reference.ts" />
 // GLOBAL GAME FRAMEWORK VARIABLES
 var assets;

@@ -1,4 +1,11 @@
-﻿module objects {
+﻿/*
+    File:               fscore.ts
+    Author:             Jason Pearson
+    Date Modified:      12/5/2015
+    Description:        Fusion core TypeScript (Pickup item)
+    Revision History:   IDK...
+*/
+module objects {
     //Barrel Class - to create the Barrel gameobject, making a variable of this type holding the Barrel sprite/gameobject
     export class fcore extends objects.GameObject { // extends to gameobject class in order to create Barrel sprite/gameobject
         //PRIVATE INSTANCE VARIABLES

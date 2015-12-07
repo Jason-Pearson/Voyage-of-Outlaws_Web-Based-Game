@@ -1,4 +1,12 @@
-﻿module objects {
+﻿/*
+    File:               ship.ts
+    Author:             Jason Pearson
+    Date Modified:      12/5/2015
+    Description:        ...
+    Revision History:   IDK...
+*/
+module objects
+{
     //Ship Class - to create the Ship gameobject, making a variable of this type holding the Ship sprite/gameobject
     export class Ship extends objects.GameObject{ // extends to gameobject class in order to create Ship sprite/gameobject
         // COSNTRUCTOR
@@ -10,7 +18,7 @@
 
         //Below is a Method Definition for better Code-Hinting
         /**
-         * Update Method for Plane Class
+         * Update Method for Ship Class
          */
         public update():void {
             this.y = stage.mouseY; //every frame, update the y-position of the Ship affixed to the mouse's y-position
@@ -25,5 +33,6 @@
                 this.y = 40;
             }
         }
+
     }
 } 
