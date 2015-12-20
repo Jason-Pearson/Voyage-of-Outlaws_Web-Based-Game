@@ -1,11 +1,4 @@
-﻿/*
-    File:               barrel.ts
-    Author:             Jason Pearson
-    Date Modified:      12/5/2015
-    Description:        ...
-    Revision History:   IDK...
-*/
-module objects {
+﻿module objects {
     //Barrel Class - to create the Barrel gameobject, making a variable of this type holding the Barrel sprite/gameobject
     export class Barrel extends objects.GameObject { // extends to gameobject class in order to create Barrel sprite/gameobject
         //PRIVATE INSTANCE VARIABLES

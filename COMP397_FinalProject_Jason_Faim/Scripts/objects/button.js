@@ -3,13 +3,6 @@ var __extends = (this && this.__extends) || function (d, b) {
     function __() { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
-/*
-    File:               button.ts
-    Author:             Jason Pearson
-    Date Modified:      12/5/2015
-    Description:        Class in charge of instantiating buttons
-    Revision History:   IDK...
-*/
 var objects;
 (function (objects) {
     var Button = (function (_super) {
@@ -39,3 +32,4 @@ var objects;
     })(createjs.Bitmap);
     objects.Button = Button;
 })(objects || (objects = {}));
+//# sourceMappingURL=button.js.map

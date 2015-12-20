@@ -3,13 +3,6 @@ var __extends = (this && this.__extends) || function (d, b) {
     function __() { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
-/*
-    File:               game.ts
-    Author:             Khandker Hussain
-    Date Modified:      12/6/2015
-    Description:        Game's scene
-    Revision History:   IDK...
-*/
 var states;
 (function (states) {
     // GAME CLASS
@@ -25,7 +18,7 @@ var states;
         Game.prototype.start = function () {
             scoreboard.setLives(5);
             scoreboard.setScore(0);
-            scoreboard.setCores(9);
+            scoreboard.setCores(0);
             console.log(scoreboard.getLives());
             console.log(scoreboard.getScore());
             console.log(scoreboard.getCores());
@@ -43,9 +36,9 @@ var states;
             //Add Ship to Game Scene at Start
             this._ship = new objects.Ship();
             this.addChild(this._ship);
-            //Add playerShot to Game Scene at start
-            this._blastShot = new objects.playerShot();
-            this.addChild(this._blastShot);
+            /*//Add playerShot to Game Scene at start
+             this._blastShot = new objects.playerShot();
+             this.addChild(this._blastShot);*/
             //Add Enemies to Game Scene at Start
             for (var enemy = 0; enemy < 5; enemy++) {
                 this._enemies[enemy] = new objects.Enemy();
@@ -59,13 +52,13 @@ var states;
             //Instantiating Collision Managers
             this._collision = new managers.Collision;
             // Score Label
-            this._scoreLabel = new objects.Label("Score: ", "40px " + config.FONT_FAMILY_DOCK, config.FONT_COLOR_YELLOW2, 5, 5, false);
+            this._scoreLabel = new objects.Label("Score: ", "40px " + config.FONT_FAMILY_2, config.FONT_COLOR_YELLOW2, 5, 5, false);
             this.addChild(this._scoreLabel);
             // Lives Label
-            this._livesLabel = new objects.Label("Lives: ", "40px " + config.FONT_FAMILY_DOCK, config.FONT_COLOR_YELLOW2, 450, 5, false);
+            this._livesLabel = new objects.Label("Lives: ", "40px " + config.FONT_FAMILY_2, config.FONT_COLOR_YELLOW2, 450, 5, false);
             this.addChild(this._livesLabel);
             // Core Label
-            this._coreLabel = new objects.Label("Fusion Cores: ", "40px " + config.FONT_FAMILY_DOCK, config.FONT_COLOR_YELLOW2, 5, 450, false);
+            this._coreLabel = new objects.Label("Fusion Cores: ", "40px " + config.FONT_FAMILY_2, config.FONT_COLOR_YELLOW2, 5, 445, false);
             this.addChild(this._coreLabel);
             stage.addChild(this);
             createjs.Sound.play("game", { loop: -1, volume: 0.3, delay: 100 }); // play game music at Start - infinite loop (-1)
@@ -107,14 +100,13 @@ var states;
             if (scoreboard.getLives() <= 0) {
                 //    this._outOf = over._outOf;
                 createjs.Sound.stop(); // stop game music upon losing all lives
-                //over._outOf = 10;
                 changeState(config.OVER_STATE);
             }
         };
         Game.prototype._win = function () {
             if (scoreboard.getCores() >= 10) {
                 createjs.Sound.stop(); // stop game music upon getting 20 barrels
-                changeState(config.LEVEL_3);
+                changeState(config.LEVEL_2);
             }
             /*if (scoreboard._barrels / 5 == 1)
             {
@@ -134,3 +126,4 @@ var states;
     })(objects.Scene);
     states.Game = Game;
 })(states || (states = {}));
+//# sourceMappingURL=game.js.map

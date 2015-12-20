@@ -3,13 +3,6 @@ var __extends = (this && this.__extends) || function (d, b) {
     function __() { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
-/*
-    File:               label.ts
-    Author:             Jason Pearson
-    Date Modified:      12/5/2015
-    Description:        ...
-    Revision History:   IDK...
-*/
 var objects;
 (function (objects) {
     // LABEL CLASS ++++++++++++++++++++++++++++++++++++++++++++++
@@ -29,3 +22,4 @@ var objects;
     })(createjs.Text);
     objects.Label = Label;
 })(objects || (objects = {}));
+//# sourceMappingURL=label.js.map

@@ -3,13 +3,6 @@ var __extends = (this && this.__extends) || function (d, b) {
     function __() { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
-/*
-    File:               gameobject.ts
-    Author:             Jason Pearson
-    Date Modified:      12/5/2015
-    Description:        ...
-    Revision History:   IDK...
-*/
 var objects;
 (function (objects) {
     //Game Object Class - extends to createjs.Sprite class properties - to make sprites in the atlas a legit gameobject (object of this class) to use for coding
@@ -73,3 +66,4 @@ var objects;
     })(createjs.Sprite);
     objects.GameObject = GameObject;
 })(objects || (objects = {}));
+//# sourceMappingURL=gameobject.js.map

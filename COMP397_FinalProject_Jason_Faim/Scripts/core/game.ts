@@ -1,11 +1,4 @@
-﻿/*
-    File:               game.ts
-    Author:             Khandker Hussain
-    Date Modified:      12/19/2015
-    Description:        Main game TypeScript
-    Revision History:   IDK...
-*/
-/// <reference path="reference.ts" />
+﻿/// <reference path="reference.ts" />
 
 
 // GLOBAL GAME FRAMEWORK VARIABLES
@@ -22,12 +15,8 @@ var scoreboard: managers.ScoreBoard;
 // GAME OBJECTS
 var menu: states.Menu;
 var game: states.Game;
-<<<<<<< Updated upstream
-var game_level2: states.Game_level2;
-=======
-//var l2: states.Level2;
+var l2: states.Level2;
 var l3: states.Level3;
->>>>>>> Stashed changes
 var over: states.Over;
 var win: states.Win;
 var atlas: createjs.SpriteSheet; // variable of type creatjs SpriteSheet to hold a reference for atlas spritesheet
@@ -99,8 +88,11 @@ var manifest =
     { id: "StartButton", src: "../../Assets/images/StartButton.png" },
     { id: "Sand", src: "../../Assets_2/images/sand.jpg" },
     { id: "Space", src: "../../Assets_2/images/space.jpg" },
+    { id: "Forest", src: "../../Assets_2/images/forest.jpg" },
     { id: "menu", src: "../../Assets/audio/menu2_music.mp3" },
     { id: "game", src: "../../Assets/audio/game2_music.mp3" },
+    { id: "Level2", src: "../../Assets/audio/level2_music.mp3" },
+    { id: "Level3", src: "../../Assets/audio/level3_music.mp3" },
     { id: "over", src: "../../Assets/audio/over2_music.mp3" },
     { id: "win", src: "../../Assets/audio/win2_music.mp3" },
     { id: "cannon", src: "../../Assets/audio/shoot_cannon.wav" },
@@ -110,7 +102,9 @@ var manifest =
     { id: "laser1", src: "../../Assets_2/audio/shots/laserfire01.ogg" },
     { id: "laser2", src: "../../Assets_2/audio/shots/laserfire02.ogg" },
     { id: "pickup", src: "../../Assets/audio/pickup1.wav" },
-    { id: "pickup2", src: "../../Assets_2/audio/pickups/Bonus 1.wav" }
+    { id: "pickup2", src: "../../Assets/audio/pickup2.wav" },
+    { id: "pickup3", src: "../../Assets/audio/pickup3.wav" },
+    { id: "core", src: "../../Assets_2/audio/pickups/Bonus 1.wav" }
 ];
 
 function preload(): void
@@ -181,19 +175,17 @@ function changeState(state): void
             game = new states.Game();
             currentState = game;
             break;
-<<<<<<< Updated upstream
-        case config.PLAY_STATE02:
+        case config.LEVEL_2:
             // show the play scene
             stage.removeAllChildren();
-            game_level2 = new states.Game_level2();
-            currentState = game_level2;
-=======
+            l2 = new states.Level2();
+            currentState = l2;
+            break;
         case config.LEVEL_3:
             // show the play scene
             stage.removeAllChildren();
             l3 = new states.Level3();
             currentState = l3;
->>>>>>> Stashed changes
             break;
         case config.OVER_STATE:
             // show the game over scene

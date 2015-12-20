@@ -3,13 +3,6 @@ var __extends = (this && this.__extends) || function (d, b) {
     function __() { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
-/*
-    File:               win.ts
-    Author:             Jason Pearson
-    Date Modified:      12/5/2015
-    Description:        Win's scene
-    Revision History:   IDK...
-*/
 var states;
 (function (states) {
     // WIN CLASS
@@ -22,12 +15,12 @@ var states;
         // PUBLIC METHODS
         Win.prototype.start = function () {
             //Add Ocean to Menu Scene at Start - for Aesthetics 
-            this._ocean = new objects.Ocean();
-            this.addChild(this._ocean);
+            this._space = new objects.Space();
+            this.addChild(this._space);
             // level label
             this._winLabel = new objects.Label("Escape Successful", "80px " + config.FONT_FAMILY_7, config.FONT_COLOR_GREEN, 319, 180, true);
             this.addChild(this._winLabel); // add label to the stage
-            this._winMessageLabel = new objects.Label("You win freedom in the limitless vacuum of space", "20px " + config.FONT_FAMILY_DOCK, config.FONT_COLOR_GREEN, 320, 240, true);
+            this._winMessageLabel = new objects.Label("You win freedom in the limitless vacuum of space", "20px " + config.FONT_FAMILY_2, config.FONT_COLOR_GREEN, 320, 240, true);
             this.addChild(this._winMessageLabel); // add label to the stage
             // restart button
             this._restartButton = new objects.Button("RestartButton", 320, 400);
@@ -37,7 +30,7 @@ var states;
             createjs.Sound.play("win", { loop: -1, volume: 0.5 }); // play win music at Start - infinite loop (-1)
         };
         Win.prototype.update = function () {
-            this._ocean.update();
+            this._space.update();
             //this._winLabel.rotation += 5;
         };
         // PRIVATE METHODS ++++++++++++++++++++++++++++++++++++++++++++++
@@ -50,3 +43,4 @@ var states;
     })(objects.Scene);
     states.Win = Win;
 })(states || (states = {}));
+//# sourceMappingURL=win.js.map

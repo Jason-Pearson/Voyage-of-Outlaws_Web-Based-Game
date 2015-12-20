@@ -3,13 +3,6 @@ var __extends = (this && this.__extends) || function (d, b) {
     function __() { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
-/*
-    File:               ship.ts
-    Author:             Jason Pearson
-    Date Modified:      12/5/2015
-    Description:        ...
-    Revision History:   IDK...
-*/
 var objects;
 (function (objects) {
     //Ship Class - to create the Ship gameobject, making a variable of this type holding the Ship sprite/gameobject
@@ -40,3 +33,4 @@ var objects;
     })(objects.GameObject);
     objects.Ship = Ship;
 })(objects || (objects = {}));
+//# sourceMappingURL=ship.js.map

@@ -1,11 +1,4 @@
-﻿/*
-    File:               ship.ts
-    Author:             Jason Pearson
-    Date Modified:      12/5/2015
-    Description:        ...
-    Revision History:   IDK...
-*/
-module objects
+﻿module objects
 {
     //Ship Class - to create the Ship gameobject, making a variable of this type holding the Ship sprite/gameobject
     export class Ship extends objects.GameObject{ // extends to gameobject class in order to create Ship sprite/gameobject

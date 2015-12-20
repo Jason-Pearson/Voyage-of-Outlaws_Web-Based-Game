@@ -1,17 +1,10 @@
-﻿/*
-    File:               over.ts
-    Author:             Jason Pearson
-    Date Modified:      12/5/2015
-    Description:        Over's scene
-    Revision History:   IDK...
-*/
-module states {
+﻿module states {
     // OVER CLASS
     export class Over extends objects.Scene {
         // PRIVATE INSTANCE VARIABLES
         private _gameOverLabel: objects.Label;
         private _restartButton: objects.Button;
-        private _ocean: objects.Ocean; // reference of type Ocean class - holds Ocean bitmap, along with class properties to control constant scrolling
+        private _sand: objects.Ocean; // reference of type Ocean class - holds Ocean bitmap, along with class properties to control constant scrolling
 
         private _finalScoreLabel: objects.Label;
         //public _outOf: number;
@@ -25,19 +18,19 @@ module states {
         public start(): void {
 
             //Add Ocean to Menu Scene at Start - for Aesthetics 
-            this._ocean = new objects.Ocean();
-            this.addChild(this._ocean);
+            this._sand = new objects.Ocean();
+            this.addChild(this._sand);
 
             // level label
-            this._gameOverLabel = new objects.Label("Escape Failed", "80px " + config.FONT_FAMILY_7, config.FONT_COLOR_RED, 305, 180, true);
+            this._gameOverLabel = new objects.Label("Escape Failed", "80px " + config.FONT_FAMILY_7, config.FONT_COLOR_RED, 320, 120, true);
             this.addChild(this._gameOverLabel); // add label to the stage
 
             //  plundered
-            this._finalScoreLabel = new objects.Label("Score: " + scoreboard._score, "40px " + config.FONT_FAMILY_DOCK, config.FONT_COLOR_RED, 320, 240, true);
+            this._finalScoreLabel = new objects.Label("Score: " + scoreboard._score, "40px " + config.FONT_FAMILY_2, config.FONT_COLOR_RED, 320, 240, true);
             this.addChild(this._finalScoreLabel); // add label to the stage
 
             //  plundered
-            this._finalScoreLabel = new objects.Label("Fusion Cores: " + scoreboard._cores, "40px " + config.FONT_FAMILY_DOCK, config.FONT_COLOR_RED, 320, 290, true);
+            this._finalScoreLabel = new objects.Label("Fusion Cores: " + scoreboard._cores, "40px " + config.FONT_FAMILY_2, config.FONT_COLOR_RED, 320, 290, true);
             this.addChild(this._finalScoreLabel); // add label to the stage
 
             // restart button
@@ -52,8 +45,7 @@ module states {
 
 
         public update(): void {
-            this._ocean.update();
-            //this._gameOverLabel.rotation += 5;
+            this._sand.update();
         }
 
         // PRIVATE METHODS ++++++++++++++++++++++++++++++++++++++++++++++

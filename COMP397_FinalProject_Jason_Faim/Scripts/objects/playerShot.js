@@ -3,13 +3,6 @@ var __extends = (this && this.__extends) || function (d, b) {
     function __() { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
-/*
-    File:               playerShot.ts
-    Author:             Khandker Hussain
-    Date Modified:      12/6/2015
-    Description:        Instantiating the shots created by the player (ship)
-    Revision History:   IDK...
-*/
 var objects;
 (function (objects) {
     //Ship Class - to create the Ship gameobject, making a variable of this type holding the Ship sprite/gameobject
@@ -33,3 +26,4 @@ var objects;
     })(objects.GameObject);
     objects.playerShot = playerShot;
 })(objects || (objects = {}));
+//# sourceMappingURL=playershot.js.map

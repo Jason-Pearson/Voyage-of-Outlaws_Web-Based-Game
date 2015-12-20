@@ -42,13 +42,21 @@
                             createjs.Sound.play("pickup"); // play game music at Start - infinite loop (-1)
                             scoreboard.addScore(10);
                             game._barrelReset(num);
+                            l2._pickup1Reset(num);
                             l3._pickup1Reset(num);
                             break;
                         case "Pickup_3": //if tag name is Barrel (pickup)
                             console.log("Hit Lithodite");
                             createjs.Sound.play("pickup2"); // play game music at Start - infinite loop (-1)
                             scoreboard.addScore(30);
+                            l2._pickup2Reset(num);
                             l3._pickup2Reset(num);
+                            break;
+                        case "Box/Cross": //if tag name is Barrel (pickup)
+                            console.log("Hit Dark Matter");
+                            createjs.Sound.play("pickup3"); // play game music at Start - infinite loop (-1)
+                            scoreboard.addScore(50);
+                            l3._pickup3Reset(num);
                             break;
                         case "Fighter3": // is tag name is Leviathan (enemy)
                             console.log("Hit Fighter");
@@ -56,15 +64,27 @@
                             scoreboard.removeLives(1);
                             game._enemyReset(num);
                             break;
-                        case "Spaceship_tut": // is tag name is Leviathan (enemy)
-                            console.log("Hit Fed Ship");
+                        case "AssaultboatB": // is tag name is Leviathan (enemy)
+                            console.log("Hit Hunter");
+                            createjs.Sound.play("damage"); // play game music at Start - infinite loop (-1)
+                            scoreboard.removeLives(1);
+                            l2._hunterReset(num);
+                            break;
+                        case "Corvette": // is tag name is Leviathan (enemy)
+                            console.log("Hit Ranger");
                             createjs.Sound.play("damage"); // play game music at Start - infinite loop (-1)
                             scoreboard.removeLives(2);
+                            l2._rangerReset(num);
+                            break;
+                        case "Spaceship_tut_small": // is tag name is Leviathan (enemy)
+                            console.log("Hit Fed Ship");
+                            createjs.Sound.play("damage"); // play game music at Start - infinite loop (-1)
+                            scoreboard.removeLives(1);
                             l3._enemyReset(num);
                             break;
                         case "Box":
                             console.log("Got Fusion Core");
-                            createjs.Sound.play("pickup2"); // play game music at Start - infinite loop (-1)
+                            createjs.Sound.play("core"); // play game music at Start - infinite loop (-1)
                             scoreboard.addCores(1);
                             game._coreReset();
                     }

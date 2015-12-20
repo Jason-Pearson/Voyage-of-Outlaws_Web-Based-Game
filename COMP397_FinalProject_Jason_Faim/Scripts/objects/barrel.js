@@ -3,13 +3,6 @@ var __extends = (this && this.__extends) || function (d, b) {
     function __() { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
-/*
-    File:               barrel.ts
-    Author:             Jason Pearson
-    Date Modified:      12/5/2015
-    Description:        ...
-    Revision History:   IDK...
-*/
 var objects;
 (function (objects) {
     //Barrel Class - to create the Barrel gameobject, making a variable of this type holding the Barrel sprite/gameobject
@@ -50,3 +43,4 @@ var objects;
     })(objects.GameObject);
     objects.Barrel = Barrel;
 })(objects || (objects = {}));
+//# sourceMappingURL=barrel.js.map

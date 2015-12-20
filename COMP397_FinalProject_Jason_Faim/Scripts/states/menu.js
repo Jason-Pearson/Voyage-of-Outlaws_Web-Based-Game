@@ -3,13 +3,6 @@ var __extends = (this && this.__extends) || function (d, b) {
     function __() { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
-/*
-    File:               game.ts
-    Author:             Jason Pearson
-    Date Modified:      12/5/2015
-    Description:        Game's scene
-    Revision History:   IDK...
-*/
 var states;
 (function (states) {
     // MENU CLASS
@@ -27,11 +20,11 @@ var states;
             // hello label
             this._gameTitleLabel = new objects.Label("Voyage of Outlaws", "80px " + config.FONT_FAMILY_7, config.FONT_COLOR_YELLOW1, 30, 100, false); //Change font and color
             this.addChild(this._gameTitleLabel); // add label to the stage
-            this._intructLabel = new objects.Label("Move the mouse up and down to move ship", "20px " + config.FONT_FAMILY_DOCK, config.FONT_COLOR_YELLOW1, 110, 220, false); //Change font and color
+            this._intructLabel = new objects.Label("Move the mouse up and down to move ship", "25px " + config.FONT_FAMILY_2, config.FONT_COLOR_YELLOW1, 110, 230, false); //Change font and color
             this.addChild(this._intructLabel); // add label to the stage
-            this._intructLabel2 = new objects.Label("Attain enough Fusion Cores to warp", "20px " + config.FONT_FAMILY_DOCK, config.FONT_COLOR_YELLOW1, 130, 270, false); //Change font and color
+            this._intructLabel2 = new objects.Label("Attain enough Fusion Cores to warp", "25px " + config.FONT_FAMILY_2, config.FONT_COLOR_YELLOW1, 135, 280, false); //Change font and color
             this.addChild(this._intructLabel2); // add label to the stage
-            this._intructLabel3 = new objects.Label("through Galactic Federacy Space and escape captivity!", "20px " + config.FONT_FAMILY_DOCK, config.FONT_COLOR_YELLOW1, 30, 300, false); //Change font and color
+            this._intructLabel3 = new objects.Label("through Galactic Federacy Space and escape captivity!", "25px " + config.FONT_FAMILY_2, config.FONT_COLOR_YELLOW1, 50, 310, false); //Change font and color
             this.addChild(this._intructLabel3); // add label to the stage
             // start button
             this._startButton = new objects.Button("StartButton", 320, 400);
@@ -53,3 +46,4 @@ var states;
     })(objects.Scene);
     states.Menu = Menu;
 })(states || (states = {}));
+//# sourceMappingURL=menu.js.map

@@ -1,11 +1,4 @@
-﻿/*
-    File:               gameobject.ts
-    Author:             Jason Pearson
-    Date Modified:      12/5/2015
-    Description:        ...
-    Revision History:   IDK...
-*/
-module objects {
+﻿module objects {
     //Game Object Class - extends to createjs.Sprite class properties - to make sprites in the atlas a legit gameobject (object of this class) to use for coding
     export class GameObject extends createjs.Sprite {
         //PROTECTED INSTANCE VARIABLES - can pass them to subclasses

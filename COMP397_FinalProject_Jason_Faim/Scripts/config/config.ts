@@ -1,25 +1,12 @@
-﻿/*
-    File:               config.ts
-    Author:             Khandker Hussain
-    Date Modified:      12/19/2015
-    Description:        Cobfig (TypeScript)
-    Revision History:   IDK...
-*/
-module config
+﻿module config
 {
     // State Constants
     export var MENU_STATE: number = 0;
     export var PLAY_STATE: number = 1;
-<<<<<<< Updated upstream
-    export var PLAY_STATE02: number = 2;
-    export var OVER_STATE: number = 3;
-    export var WIN_STATE: number = 4;
-=======
     export var LEVEL_2: number = 2;
     export var LEVEL_3: number = 3;
     export var OVER_STATE: number = 4;
     export var WIN_STATE: number = 5;
->>>>>>> Stashed changes
 
     // Font Constants
     export var FONT_FAMILY_DIANE: string = "DianeDeFrance";

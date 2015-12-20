@@ -102,8 +102,13 @@
     <TypeScriptCompile Include="Scripts\objects\enemy.ts" />
     <TypeScriptCompile Include="Scripts\objects\fcore.ts" />
     <TypeScriptCompile Include="Scripts\objects\feds.ts" />
+    <TypeScriptCompile Include="Scripts\objects\forest.ts" />
     <TypeScriptCompile Include="Scripts\objects\gameobject.ts" />
+    <TypeScriptCompile Include="Scripts\objects\hunters.ts" />
     <TypeScriptCompile Include="Scripts\objects\label.ts" />
+    <TypeScriptCompile Include="Scripts\objects\pickup3.ts" />
+    <TypeScriptCompile Include="Scripts\objects\rangers.ts" />
+    <TypeScriptCompile Include="Scripts\states\Level2.ts" />
     <TypeScriptCompile Include="Scripts\states\Level3.ts" />
     <TypeScriptCompile Include="Scripts\objects\ocean.ts" />
     <TypeScriptCompile Include="Scripts\objects\pickup2.ts" />
@@ -112,7 +117,6 @@
     <TypeScriptCompile Include="Scripts\objects\ship.ts" />
     <TypeScriptCompile Include="Scripts\objects\space.ts" />
     <TypeScriptCompile Include="Scripts\states\game.ts" />
-    <TypeScriptCompile Include="Scripts\states\game_level2.ts" />
     <TypeScriptCompile Include="Scripts\states\menu.ts" />
     <TypeScriptCompile Include="Scripts\states\over.ts" />
     <TypeScriptCompile Include="Scripts\states\win.ts" />
@@ -140,11 +144,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>25618</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-<<<<<<< Updated upstream
-          <IISUrl>http://localhost:6969/</IISUrl>
-=======
           <IISUrl>http://localhost:2013/</IISUrl>
->>>>>>> Stashed changes
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

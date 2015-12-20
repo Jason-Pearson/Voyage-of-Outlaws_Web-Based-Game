@@ -1,11 +1,4 @@
-﻿/*
-    File:               game.ts
-    Author:             Khandker Hussain
-    Date Modified:      12/6/2015
-    Description:        Game's scene
-    Revision History:   IDK...
-*/
-module states
+﻿module states
 {
     // GAME CLASS
     export class Game extends objects.Scene
@@ -36,7 +29,7 @@ module states
 
             scoreboard.setLives(5);
             scoreboard.setScore(0);
-            scoreboard.setCores(9);
+            scoreboard.setCores(0);
             console.log(scoreboard.getLives());
             console.log(scoreboard.getScore());
             console.log(scoreboard.getCores());
@@ -60,9 +53,9 @@ module states
             this._ship = new objects.Ship();
             this.addChild(this._ship);
 
-            //Add playerShot to Game Scene at start
+           /*//Add playerShot to Game Scene at start
             this._blastShot = new objects.playerShot();
-            this.addChild(this._blastShot);
+            this.addChild(this._blastShot);*/
 
             //Add Enemies to Game Scene at Start
             for (var enemy = 0; enemy < 5; enemy++)
@@ -80,15 +73,15 @@ module states
             this._collision = new managers.Collision;
 
             // Score Label
-            this._scoreLabel = new objects.Label("Score: ", "40px " + config.FONT_FAMILY_DOCK, config.FONT_COLOR_YELLOW2, 5, 5, false);
+            this._scoreLabel = new objects.Label("Score: ", "40px " + config.FONT_FAMILY_2, config.FONT_COLOR_YELLOW2, 5, 5, false);
             this.addChild(this._scoreLabel);
             
             // Lives Label
-            this._livesLabel = new objects.Label("Lives: ", "40px " + config.FONT_FAMILY_DOCK, config.FONT_COLOR_YELLOW2, 450, 5, false);
+            this._livesLabel = new objects.Label("Lives: ", "40px " + config.FONT_FAMILY_2, config.FONT_COLOR_YELLOW2, 450, 5, false);
             this.addChild(this._livesLabel);
 
             // Core Label
-            this._coreLabel = new objects.Label("Fusion Cores: ", "40px " + config.FONT_FAMILY_DOCK, config.FONT_COLOR_YELLOW2, 5, 450, false);
+            this._coreLabel = new objects.Label("Fusion Cores: ", "40px " + config.FONT_FAMILY_2, config.FONT_COLOR_YELLOW2, 5, 445, false);
             this.addChild(this._coreLabel);
 
             stage.addChild(this);
@@ -138,18 +131,10 @@ module states
             this._coreLabel.text = "Fusion Cores: " + scoreboard.getCores() + "/10";
         }
 
-<<<<<<< Updated upstream
-        private _gameOver(): void
-        {
-            if (scoreboard.getLives() == 0)
-            {
-=======
         private _gameOver(): void {
             if (scoreboard.getLives() <= 0) {
             //    this._outOf = over._outOf;
->>>>>>> Stashed changes
                 createjs.Sound.stop(); // stop game music upon losing all lives
-                //over._outOf = 10;
                 changeState(config.OVER_STATE);
             }
         }
@@ -159,7 +144,7 @@ module states
             if (scoreboard.getCores() >= 10)
             {
                 createjs.Sound.stop(); // stop game music upon getting 20 barrels
-                changeState(config.LEVEL_3);
+                changeState(config.LEVEL_2);
             }
             /*if (scoreboard._barrels / 5 == 1) 
             {

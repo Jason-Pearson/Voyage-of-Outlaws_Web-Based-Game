@@ -1,11 +1,4 @@
-﻿/*
-    File:               playerShot.ts
-    Author:             Khandker Hussain
-    Date Modified:      12/6/2015
-    Description:        Instantiating the shots created by the player (ship)
-    Revision History:   IDK...
-*/
-module objects
+﻿module objects
 {
     //Ship Class - to create the Ship gameobject, making a variable of this type holding the Ship sprite/gameobject
     export class playerShot extends objects.GameObject { // extends to gameobject class in order to create Ship sprite/gameobject

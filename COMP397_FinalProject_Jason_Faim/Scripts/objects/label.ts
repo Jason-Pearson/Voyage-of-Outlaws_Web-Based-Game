@@ -1,11 +1,4 @@
-﻿/*
-    File:               label.ts
-    Author:             Jason Pearson
-    Date Modified:      12/5/2015
-    Description:        ...
-    Revision History:   IDK...
-*/
-module objects {
+﻿module objects {
     // LABEL CLASS ++++++++++++++++++++++++++++++++++++++++++++++
     export class Label extends createjs.Text {
         // CONSTRUCTOR METHOD +++++++++++++++++++++++++++++++++++
