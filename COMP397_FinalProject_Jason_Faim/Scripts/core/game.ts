@@ -7,6 +7,7 @@
 */
 /// <reference path="reference.ts" />
 
+
 // GLOBAL GAME FRAMEWORK VARIABLES
 var assets: createjs.LoadQueue;
 var canvas: HTMLElement;
@@ -21,7 +22,12 @@ var scoreboard: managers.ScoreBoard;
 // GAME OBJECTS
 var menu: states.Menu;
 var game: states.Game;
+<<<<<<< Updated upstream
 var game_level2: states.Game_level2;
+=======
+//var l2: states.Level2;
+var l3: states.Level3;
+>>>>>>> Stashed changes
 var over: states.Over;
 var win: states.Win;
 var atlas: createjs.SpriteSheet; // variable of type creatjs SpriteSheet to hold a reference for atlas spritesheet
@@ -92,6 +98,7 @@ var manifest =
     { id: "MenuButton", src: "../../Assets/images/MenuButton.png" },
     { id: "StartButton", src: "../../Assets/images/StartButton.png" },
     { id: "Sand", src: "../../Assets_2/images/sand.jpg" },
+    { id: "Space", src: "../../Assets_2/images/space.jpg" },
     { id: "menu", src: "../../Assets/audio/menu2_music.mp3" },
     { id: "game", src: "../../Assets/audio/game2_music.mp3" },
     { id: "over", src: "../../Assets/audio/over2_music.mp3" },
@@ -174,11 +181,19 @@ function changeState(state): void
             game = new states.Game();
             currentState = game;
             break;
+<<<<<<< Updated upstream
         case config.PLAY_STATE02:
             // show the play scene
             stage.removeAllChildren();
             game_level2 = new states.Game_level2();
             currentState = game_level2;
+=======
+        case config.LEVEL_3:
+            // show the play scene
+            stage.removeAllChildren();
+            l3 = new states.Level3();
+            currentState = l3;
+>>>>>>> Stashed changes
             break;
         case config.OVER_STATE:
             // show the game over scene

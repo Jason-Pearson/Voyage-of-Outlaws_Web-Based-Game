@@ -3,36 +3,30 @@ var __extends = (this && this.__extends) || function (d, b) {
     function __() { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
-/*
-    File:               game.ts
-    Author:             Khandker Hussain
-    Date Modified:      12/6/2015
-    Description:        Game's scene
-    Revision History:   IDK...
-*/
 var states;
 (function (states) {
     // GAME CLASS
-    var Game = (function (_super) {
-        __extends(Game, _super);
+    var Level3 = (function (_super) {
+        __extends(Level3, _super);
         // CONSTRUCTOR
-        function Game() {
+        function Level3() {
             _super.call(this);
             this._barrels = []; // referene of type Barrel class - holds Barrel gameobject, along with class properties to control spawning and scoring
-            this._enemies = []; // referene of type Enemy class - holds Enemy gameobject, along with class properties to control spawning, AI movement, player interaction
+            this._pickup2 = []; // referene of type Barrel class - holds Barrel gameobject, along with class properties to control spawning and scoring
+            this._feds = []; // referene of type Enemy class - holds Enemy gameobject, along with class properties to control spawning, AI movement, player interaction
         }
         // PUBLIC METHODS
-        Game.prototype.start = function () {
+        Level3.prototype.start = function () {
             scoreboard.setLives(5);
             scoreboard.setScore(0);
-            scoreboard.setCores(9);
+            scoreboard.setCores(0);
             console.log(scoreboard.getLives());
             console.log(scoreboard.getScore());
             console.log(scoreboard.getCores());
-            //  this._outOf = 10;
+            //this._outOf = 20;
             //Add Ocean to Game Scene at Start
-            this._ocean = new objects.Ocean();
-            this.addChild(this._ocean);
+            this._space = new objects.Space();
+            this.addChild(this._space);
             //Add Barrels to Game Scene at Start
             for (var barrel = 0; barrel < 3; barrel++) {
                 this._barrels[barrel] = new objects.Barrel();
@@ -40,21 +34,26 @@ var states;
                 //this._barrels[barrel].setName(this._barrels[barrel]._tagName);
                 this.addChild(this._barrels[barrel]);
             }
+            //Add Barrels to Game Scene at Start
+            for (var pickups = 0; pickups < 2; pickups++) {
+                this._pickup2[pickups] = new objects.Pickup2();
+                //this._barrels[barrel]._tagName = "Barrel#" + barrel;
+                //this._barrels[barrel].setName(this._barrels[barrel]._tagName);
+                this.addChild(this._pickup2[pickups]);
+            }
             //Add Ship to Game Scene at Start
             this._ship = new objects.Ship();
             this.addChild(this._ship);
-            //Add playerShot to Game Scene at start
-            this._blastShot = new objects.playerShot();
-            this.addChild(this._blastShot);
             //Add Enemies to Game Scene at Start
-            for (var enemy = 0; enemy < 5; enemy++) {
-                this._enemies[enemy] = new objects.Enemy();
+            for (var feds = 0; feds < 3; feds++) {
+                this._feds[feds] = new objects.Feds();
                 //this._enemies[enemy]._tagName = "Enemy#" + enemy;
                 //this._enemies[enemy].setName(this._enemies[enemy]._tagName);
-                this.addChild(this._enemies[enemy]);
+                this.addChild(this._feds[feds]);
             }
             //Add a Fusion Core
             this._fusionCore = new objects.fcore();
+            //this._fusionCore.x = 1980;
             this.addChild(this._fusionCore);
             //Instantiating Collision Managers
             this._collision = new managers.Collision;
@@ -72,18 +71,22 @@ var states;
         };
         //GAME OVER METHOD - Lives reach 0 - stop music, save score, change state
         //GAME SCENE UPDATE METHOD
-        Game.prototype.update = function () {
-            this._ocean.update(); // every frame, call the update method of Ocean class in order to scroll
-            for (var barrel = 0; barrel < 3; barrel++) {
-                this._barrels[barrel].update();
-                this._collision.update(this._ship, this._barrels[barrel], barrel); // every frame, check collision between Ship and each Barrel
+        Level3.prototype.update = function () {
+            this._space.update(); // every frame, call the update method of Ocean class in order to scroll
+            for (var pickups = 0; pickups < 3; pickups++) {
+                this._barrels[pickups].update();
+                this._collision.update(this._ship, this._barrels[pickups], pickups); // every frame, check collision between Ship and each Barrel
+            }
+            for (var pickups = 0; pickups < 2; pickups++) {
+                this._pickup2[pickups].update();
+                this._collision.update(this._ship, this._pickup2[pickups], pickups); // every frame, check collision between Ship and each Barrel
             }
             this._fusionCore.update();
             this._collision.update(this._ship, this._fusionCore, 1);
             this._ship.update(); // every frame, call the update method of Ship class in order to move
-            for (var enemy = 0; enemy < 5; enemy++) {
-                this._enemies[enemy].update();
-                this._collision.update(this._ship, this._enemies[enemy], enemy); // every frame, check collision between Ship and each Enemy
+            for (var feds = 0; feds < 3; feds++) {
+                this._feds[feds].update();
+                this._collision.update(this._ship, this._feds[feds], feds); // every frame, check collision between Ship and each Enemy
             }
             this._updateLabels();
             this._win();
@@ -91,46 +94,47 @@ var states;
             /*this.on("click", this.playerShot, this);
             console.log(this.on("click", this.playerShot, this));*/
         };
-        /*private playerShot(): void
-       {
+        /*private playerShot(): void {
            this._playerShot = new objects.playerShot;
            this.addChild(this._playerShot);
            console.log(this.addChild(this._playerShot));
            stage.addChild(this);
        }*/
-        Game.prototype._updateLabels = function () {
+        Level3.prototype._updateLabels = function () {
             this._scoreLabel.text = "Score: " + scoreboard.getScore();
             this._livesLabel.text = "Lives: " + scoreboard.getLives();
-            this._coreLabel.text = "Fusion Cores: " + scoreboard.getCores() + "/10";
+            this._coreLabel.text = "Fusion Cores: " + scoreboard.getCores() + "/20";
         };
-        Game.prototype._gameOver = function () {
+        Level3.prototype._gameOver = function () {
             if (scoreboard.getLives() <= 0) {
-                //    this._outOf = over._outOf;
+                //this._outOf = over._outOf;
                 createjs.Sound.stop(); // stop game music upon losing all lives
-                //over._outOf = 10;
                 changeState(config.OVER_STATE);
             }
         };
-        Game.prototype._win = function () {
-            if (scoreboard.getCores() >= 10) {
+        Level3.prototype._win = function () {
+            if (scoreboard.getCores() >= 20) {
                 createjs.Sound.stop(); // stop game music upon getting 20 barrels
-                changeState(config.LEVEL_3);
+                changeState(config.WIN_STATE);
             }
-            /*if (scoreboard._barrels / 5 == 1)
-            {
+            /*if (scoreboard._barrels / 5 == 1) {
                 scoreboard.addLives(1);
             }*/
         };
-        Game.prototype._barrelReset = function (barrel) {
+        Level3.prototype._pickup1Reset = function (barrel) {
             this._barrels[barrel]._reset();
         };
-        Game.prototype._enemyReset = function (enemy) {
-            this._enemies[enemy]._reset();
+        Level3.prototype._pickup2Reset = function (barrel) {
+            this._pickup2[barrel]._reset();
         };
-        Game.prototype._coreReset = function () {
+        Level3.prototype._enemyReset = function (enemy) {
+            this._feds[enemy]._reset();
+        };
+        Level3.prototype._coreReset = function () {
             this._fusionCore._reset();
         };
-        return Game;
+        return Level3;
     })(objects.Scene);
-    states.Game = Game;
+    states.Level3 = Level3;
 })(states || (states = {}));
+//# sourceMappingURL=Level3.js.map

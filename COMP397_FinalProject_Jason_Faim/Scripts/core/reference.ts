@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 ﻿/*
     File:               reference.ts
     Author:             Jason Pearson
@@ -6,6 +7,9 @@
     Revision History:   IDK...
 */
 /// <reference path="../config/config.ts" />
+=======
+﻿/// <reference path="../config/config.ts" />
+>>>>>>> Stashed changes
 
 /// <reference path="../typings/jquery/jquery.d.ts" />
 /// <reference path="../typings/stats/stats.d.ts" />
@@ -24,12 +28,16 @@
 /// <reference path="../objects/ship.ts" />
 /// <reference path="../objects/playershot.ts" />
 /// <reference path="../objects/enemy.ts" />
+/// <reference path="../objects/feds.ts" />
 /// <reference path="../objects/barrel.ts" />
+/// <reference path="../objects/pickup2.ts" />
 /// <reference path="../objects/fcore.ts" />
+/// <reference path="../objects/space.ts" />
 /// <reference path="../objects/ocean.ts" />
 /// <reference path="../objects/scene.ts" />
 
 /// <reference path="../states/win.ts" />
 /// <reference path="../states/over.ts" />
+/// <reference path="../states/Level3.ts" />
 /// <reference path="../states/game.ts" />
 /// <reference path="../states/menu.ts" />

@@ -10,9 +10,16 @@ var config;
     // State Constants
     config.MENU_STATE = 0;
     config.PLAY_STATE = 1;
+<<<<<<< Updated upstream
     config.PLAY_STATE02 = 2;
     config.OVER_STATE = 3;
     config.WIN_STATE = 4;
+=======
+    config.LEVEL_2 = 2;
+    config.LEVEL_3 = 3;
+    config.OVER_STATE = 4;
+    config.WIN_STATE = 5;
+>>>>>>> Stashed changes
     // Font Constants
     config.FONT_FAMILY_DIANE = "DianeDeFrance";
     config.FONT_FAMILY_DOCK = "Dock51";

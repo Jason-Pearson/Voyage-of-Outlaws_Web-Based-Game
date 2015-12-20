@@ -15,6 +15,7 @@ var states;
     // OVER CLASS
     var Over = (function (_super) {
         __extends(Over, _super);
+        //public _outOf: number;
         // CONSTRUCTOR
         function Over() {
             _super.call(this);
@@ -31,7 +32,7 @@ var states;
             this._finalScoreLabel = new objects.Label("Score: " + scoreboard._score, "40px " + config.FONT_FAMILY_DOCK, config.FONT_COLOR_RED, 320, 240, true);
             this.addChild(this._finalScoreLabel); // add label to the stage
             //  plundered
-            this._finalScoreLabel = new objects.Label("Fusion Cores: " + scoreboard._cores + "/10", "40px " + config.FONT_FAMILY_DOCK, config.FONT_COLOR_RED, 320, 290, true);
+            this._finalScoreLabel = new objects.Label("Fusion Cores: " + scoreboard._cores, "40px " + config.FONT_FAMILY_DOCK, config.FONT_COLOR_RED, 320, 290, true);
             this.addChild(this._finalScoreLabel); // add label to the stage
             // restart button
             this._restartButton = new objects.Button("RestartButton", 320, 400);
