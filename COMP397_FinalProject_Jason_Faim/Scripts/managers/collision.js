@@ -62,4 +62,3 @@ var managers;
     })();
     managers.Collision = Collision;
 })(managers || (managers = {}));
-//# sourceMappingURL=collision.js.map

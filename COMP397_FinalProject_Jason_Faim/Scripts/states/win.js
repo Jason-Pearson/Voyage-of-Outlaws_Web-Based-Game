@@ -25,7 +25,7 @@ var states;
             this._ocean = new objects.Ocean();
             this.addChild(this._ocean);
             // level label
-            this._winLabel = new objects.Label("Escape Successful", "150px " + config.FONT_FAMILY_DIANE, config.FONT_COLOR_GREEN, 319, 180, true);
+            this._winLabel = new objects.Label("Escape Successful", "80px " + config.FONT_FAMILY_7, config.FONT_COLOR_GREEN, 319, 180, true);
             this.addChild(this._winLabel); // add label to the stage
             this._winMessageLabel = new objects.Label("You win freedom in the limitless vacuum of space", "20px " + config.FONT_FAMILY_DOCK, config.FONT_COLOR_GREEN, 320, 240, true);
             this.addChild(this._winMessageLabel); // add label to the stage
@@ -50,4 +50,3 @@ var states;
     })(objects.Scene);
     states.Win = Win;
 })(states || (states = {}));
-//# sourceMappingURL=win.js.map

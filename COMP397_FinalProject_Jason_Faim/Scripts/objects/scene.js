@@ -28,4 +28,3 @@ var objects;
     })(createjs.Container);
     objects.Scene = Scene;
 })(objects || (objects = {}));
-//# sourceMappingURL=scene.js.map

@@ -21,26 +21,15 @@ var objects;
             //this.speed = 15
             //Start Spawn Position - preferrably in front of the player
             this.x = (game._ship.x) + 60;
-            this.y = game._ship.y;
+            //this.y = game._ship.y;
         }
         playerShot.prototype.update = function () {
-            //this.y = stage.mouseY;//TESTING PURPOSES
-            this.x += this.speed; //every frame, update the y-position of the Ship affixed to the mouse's y-position
+            this.y = stage.mouseY; //TESTING PURPOSES
+            //this.x += this.speed; //every frame, update the y-position of the Ship affixed to the mouse's y-position
             //this._removeClone();
-            this._blastShot();
-        };
-        //private _removeClone(): void {
-        //    if (this.x >= 600) {
-        //        game.stage.removeChild(this);
-        //    }
-        //}
-        playerShot.prototype._blastShot = function () {
-            stage.addEventListener("click", function (event) {
-                alert("clicked");
-            });
+            //this._blastShot();
         };
         return playerShot;
     })(objects.GameObject);
     objects.playerShot = playerShot;
 })(objects || (objects = {}));
-//# sourceMappingURL=playershot.js.map

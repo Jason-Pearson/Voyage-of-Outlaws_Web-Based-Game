@@ -25,7 +25,7 @@ var states;
             this._ocean = new objects.Ocean();
             this.addChild(this._ocean);
             // hello label
-            this._gameTitleLabel = new objects.Label("Voyage of Outlaws", "150px " + config.FONT_FAMILY_DIANE, config.FONT_COLOR_YELLOW1, 30, 100, false); //Change font and color
+            this._gameTitleLabel = new objects.Label("Voyage of Outlaws", "80px " + config.FONT_FAMILY_7, config.FONT_COLOR_YELLOW1, 30, 100, false); //Change font and color
             this.addChild(this._gameTitleLabel); // add label to the stage
             this._intructLabel = new objects.Label("Move the mouse up and down to move ship", "20px " + config.FONT_FAMILY_DOCK, config.FONT_COLOR_YELLOW1, 110, 220, false); //Change font and color
             this.addChild(this._intructLabel); // add label to the stage
@@ -53,4 +53,3 @@ var states;
     })(objects.Scene);
     states.Menu = Menu;
 })(states || (states = {}));
-//# sourceMappingURL=menu.js.map

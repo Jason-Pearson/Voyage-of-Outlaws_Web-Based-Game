@@ -29,4 +29,3 @@
 /// <reference path="../states/over.ts" />
 /// <reference path="../states/game.ts" />
 /// <reference path="../states/menu.ts" /> 
-//# sourceMappingURL=reference.js.map

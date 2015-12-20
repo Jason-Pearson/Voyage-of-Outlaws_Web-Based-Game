@@ -4,7 +4,7 @@ var __extends = (this && this.__extends) || function (d, b) {
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
 /*
-    File:               game.ts
+    File:               game_level2.ts
     Author:             Khandker Hussain
     Date Modified:      12/6/2015
     Description:        Game's scene
@@ -13,16 +13,16 @@ var __extends = (this && this.__extends) || function (d, b) {
 var states;
 (function (states) {
     // GAME CLASS
-    var Game = (function (_super) {
-        __extends(Game, _super);
+    var Game_level2 = (function (_super) {
+        __extends(Game_level2, _super);
         // CONSTRUCTOR
-        function Game() {
+        function Game_level2() {
             _super.call(this);
             this._barrels = []; // referene of type Barrel class - holds Barrel gameobject, along with class properties to control spawning and scoring
             this._enemies = []; // referene of type Enemy class - holds Enemy gameobject, along with class properties to control spawning, AI movement, player interaction
         }
         // PUBLIC METHODS
-        Game.prototype.start = function () {
+        Game_level2.prototype.start = function () {
             scoreboard.setLives(5);
             scoreboard.setScore(0);
             scoreboard.setCores(0);
@@ -71,7 +71,7 @@ var states;
         };
         //GAME OVER METHOD - Lives reach 0 - stop music, save score, change state
         //GAME SCENE UPDATE METHOD
-        Game.prototype.update = function () {
+        Game_level2.prototype.update = function () {
             this._ocean.update(); // every frame, call the update method of Ocean class in order to scroll
             for (var barrel = 0; barrel < 3; barrel++) {
                 this._barrels[barrel].update();
@@ -97,18 +97,18 @@ var states;
            console.log(this.addChild(this._playerShot));
            stage.addChild(this);
        }*/
-        Game.prototype._updateLabels = function () {
+        Game_level2.prototype._updateLabels = function () {
             this._scoreLabel.text = "Score: " + scoreboard.getScore();
             this._livesLabel.text = "Lives: " + scoreboard.getLives();
             this._coreLabel.text = "Fusion Cores: " + scoreboard.getCores() + "/10";
         };
-        Game.prototype._gameOver = function () {
+        Game_level2.prototype._gameOver = function () {
             if (scoreboard.getLives() == 0) {
                 createjs.Sound.stop(); // stop game music upon losing all lives
                 changeState(config.OVER_STATE);
             }
         };
-        Game.prototype._win = function () {
+        Game_level2.prototype._win = function () {
             if (scoreboard.getCores() >= 10) {
                 createjs.Sound.stop(); // stop game music upon getting 20 barrels
                 changeState(config.WIN_STATE);
@@ -118,16 +118,16 @@ var states;
                 scoreboard.addLives(1);
             }*/
         };
-        Game.prototype._barrelReset = function (barrel) {
+        Game_level2.prototype._barrelReset = function (barrel) {
             this._barrels[barrel]._reset();
         };
-        Game.prototype._enemyReset = function (enemy) {
+        Game_level2.prototype._enemyReset = function (enemy) {
             this._enemies[enemy]._reset();
         };
-        Game.prototype._coreReset = function () {
+        Game_level2.prototype._coreReset = function () {
             this._fusionCore._reset();
         };
-        return Game;
+        return Game_level2;
     })(objects.Scene);
-    states.Game = Game;
+    states.Game_level2 = Game_level2;
 })(states || (states = {}));

@@ -28,7 +28,7 @@ module states {
             this.addChild(this._ocean);
 
             // level label
-            this._gameOverLabel = new objects.Label("Escape Failed", "150px " + config.FONT_FAMILY_DIANE, config.FONT_COLOR_RED, 305, 180, true);
+            this._gameOverLabel = new objects.Label("Escape Failed", "80px " + config.FONT_FAMILY_7, config.FONT_COLOR_RED, 305, 180, true);
             this.addChild(this._gameOverLabel); // add label to the stage
 
             //  plundered

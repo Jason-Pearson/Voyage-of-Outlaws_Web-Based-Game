@@ -1,7 +1,7 @@
 /*
     File:               game.ts
-    Author:             Jason Pearson
-    Date Modified:      12/5/2015
+    Author:             Khandker Hussain
+    Date Modified:      12/19/2015
     Description:        Main game TypeScript
     Revision History:   IDK...
 */
@@ -18,6 +18,7 @@ var scoreboard;
 // GAME OBJECTS
 var menu;
 var game;
+var game_level2;
 var over;
 var win;
 var atlas; // variable of type creatjs SpriteSheet to hold a reference for atlas spritesheet
@@ -143,6 +144,12 @@ function changeState(state) {
             game = new states.Game();
             currentState = game;
             break;
+        case config.PLAY_STATE02:
+            // show the play scene
+            stage.removeAllChildren();
+            game_level2 = new states.Game_level2();
+            currentState = game_level2;
+            break;
         case config.OVER_STATE:
             // show the game over scene
             stage.removeAllChildren();
@@ -159,4 +166,3 @@ function changeState(state) {
     currentState.start();
     console.log(currentState.numChildren);
 }
-//# sourceMappingURL=game.js.map

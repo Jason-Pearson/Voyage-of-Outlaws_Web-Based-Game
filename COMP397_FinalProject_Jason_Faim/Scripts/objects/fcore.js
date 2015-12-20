@@ -51,4 +51,3 @@ var objects;
     })(objects.GameObject);
     objects.fcore = fcore;
 })(objects || (objects = {}));
-//# sourceMappingURL=fcore.js.map

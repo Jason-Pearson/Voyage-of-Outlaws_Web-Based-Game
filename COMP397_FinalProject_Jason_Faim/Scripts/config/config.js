@@ -1,7 +1,7 @@
 /*
     File:               config.ts
-    Author:             Jason Pearson
-    Date Modified:      12/5/2015
+    Author:             Khandker Hussain
+    Date Modified:      12/19/2015
     Description:        Cobfig (TypeScript)
     Revision History:   IDK...
 */
@@ -10,11 +10,13 @@ var config;
     // State Constants
     config.MENU_STATE = 0;
     config.PLAY_STATE = 1;
-    config.OVER_STATE = 2;
-    config.WIN_STATE = 3;
+    config.PLAY_STATE02 = 2;
+    config.OVER_STATE = 3;
+    config.WIN_STATE = 4;
     // Font Constants
     config.FONT_FAMILY_DIANE = "DianeDeFrance";
     config.FONT_FAMILY_DOCK = "Dock51";
+    config.FONT_FAMILY_256Bytes = "256_bytesregular";
     config.FONT_FAMILY_1 = "minisystemregular";
     config.FONT_FAMILY_2 = "failed_attemptregular";
     config.FONT_FAMILY_3 = "v_dubregular";
@@ -30,4 +32,3 @@ var config;
     config.FONT_COLOR_YELLOW2 = "#FFFF00"; //yellow - game state
     config.FONT_COLOR_GREEN = "#2BFF7A"; // green - win state
 })(config || (config = {}));
-//# sourceMappingURL=config.js.map

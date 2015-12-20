@@ -4,20 +4,19 @@ var __extends = (this && this.__extends) || function (d, b) {
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
 /*
-    File:               barrel.ts
-    Author:             Jason Pearson
-    Date Modified:      12/5/2015
+    File:               pickup2.ts
+    Author:             Khandker Hussain
+    Date Modified:      12/19/2015
     Description:        ...
     Revision History:   IDK...
 */
 var objects;
 (function (objects) {
-    //Barrel Class - to create the Barrel gameobject, making a variable of this type holding the Barrel sprite/gameobject
-    var Barrel = (function (_super) {
-        __extends(Barrel, _super);
+    var pickup2 = (function (_super) {
+        __extends(pickup2, _super);
         //CONTRUCTOR
-        function Barrel() {
-            _super.call(this, "Pickup"); // makes a super call to the GameObject class, gives imageString value to refer to Barrel in the Atlus SpriteSheet variable
+        function pickup2() {
+            _super.call(this, "Pickup_2"); // makes a super call to the GameObject class, gives imageString value to refer to Barrel in the Atlus SpriteSheet variable
             //basically what would be called in the Start method
             this._dx = 10;
             this._reset();
@@ -26,7 +25,7 @@ var objects;
         /**
          * Update Method for Barrel Class
          */
-        Barrel.prototype.update = function () {
+        pickup2.prototype.update = function () {
             this.x -= this._dx; //every frame, the position of the Barrel is decremented by _dx= 5(pixels)
             this._checkBounds(); //every frame, call _checkBounds to check the bounds before resetting Barrel
         };
@@ -34,19 +33,19 @@ var objects;
         /**
          * Resets the Barrel radomely between x = 800 (off-screen) and just before the canvas (x = 640), and resets at a random y-position within the height of the canvas
          */
-        Barrel.prototype._reset = function () {
+        pickup2.prototype._reset = function () {
             this.y = Math.floor(Math.random() * (480 - this._height)) + (this._height * 0.5); // the entire height of the sprite image will be within view of the canvas while randomely resetting
             this.x = Math.floor(Math.random() * (800)) + (640 + this._width); // (Using 640 + width of sprite: so it doesn't pop onto the screen, but off-screen for better transition into the scene)
         };
         /**
-         * Checks if Barrel needs to Reset after scrolling beyond the canvas via the entire width of the barrel sprite (better transitioning for resetting)
+         * Checks if Pickup2 needs to Reset after scrolling beyond the canvas via the entire width of the barrel sprite (better transitioning for resetting)
          */
-        Barrel.prototype._checkBounds = function () {
+        pickup2.prototype._checkBounds = function () {
             if (this.x <= -this._width) {
                 this._reset();
             }
         };
-        return Barrel;
+        return pickup2;
     })(objects.GameObject);
-    objects.Barrel = Barrel;
+    objects.pickup2 = pickup2;
 })(objects || (objects = {}));

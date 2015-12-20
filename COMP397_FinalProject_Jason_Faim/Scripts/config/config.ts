@@ -1,21 +1,23 @@
 ﻿/*
     File:               config.ts
-    Author:             Jason Pearson
-    Date Modified:      12/5/2015
+    Author:             Khandker Hussain
+    Date Modified:      12/19/2015
     Description:        Cobfig (TypeScript)
     Revision History:   IDK...
 */
-module config {
-
+module config
+{
     // State Constants
     export var MENU_STATE: number = 0;
     export var PLAY_STATE: number = 1;
-    export var OVER_STATE: number = 2;
-    export var WIN_STATE: number = 3;
+    export var PLAY_STATE02: number = 2;
+    export var OVER_STATE: number = 3;
+    export var WIN_STATE: number = 4;
 
     // Font Constants
     export var FONT_FAMILY_DIANE: string = "DianeDeFrance";
     export var FONT_FAMILY_DOCK: string = "Dock51";
+    export var FONT_FAMILY_256Bytes: string = "256_bytesregular";
 
     export var FONT_FAMILY_1: string = "minisystemregular";
     export var FONT_FAMILY_2: string = "failed_attemptregular";
@@ -32,5 +34,4 @@ module config {
     export var FONT_COLOR_YELLOW1: string = "#FFCB35"; // yellow - menu state
     export var FONT_COLOR_YELLOW2: string = "#FFFF00"; //yellow - game state
     export var FONT_COLOR_GREEN: string = "#2BFF7A"; // green - win state
-
 }

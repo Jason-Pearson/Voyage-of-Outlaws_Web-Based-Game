@@ -1,7 +1,7 @@
 ﻿/*
     File:               game.ts
-    Author:             Jason Pearson
-    Date Modified:      12/5/2015
+    Author:             Khandker Hussain
+    Date Modified:      12/19/2015
     Description:        Main game TypeScript
     Revision History:   IDK...
 */
@@ -21,18 +21,22 @@ var scoreboard: managers.ScoreBoard;
 // GAME OBJECTS
 var menu: states.Menu;
 var game: states.Game;
+var game_level2: states.Game_level2;
 var over: states.Over;
 var win: states.Win;
 var atlas: createjs.SpriteSheet; // variable of type creatjs SpriteSheet to hold a reference for atlas spritesheet
 
 //SPRITE OBJECTS from ATLAS SPRITESHEET
-var data = {
+var data =
+{
 
-    "images": [
+    "images":
+    [
         "../../Assets_2/images/atlus.png"
     ],
 
-    "frames": [
+    "frames":
+    [
         [2, 2, 1920, 480, 0, 0, 0],
         [2, 484, 444, 344, 0, -23, -102],
         [448, 484, 241, 164, 0, 0, 0],
@@ -82,7 +86,8 @@ var data = {
 };
 
 // manifest of all our assets
-var manifest = [
+var manifest =
+[
     { id: "RestartButton", src: "../../Assets/images/RestartButton.png" },
     { id: "MenuButton", src: "../../Assets/images/MenuButton.png" },
     { id: "StartButton", src: "../../Assets/images/StartButton.png" },
@@ -101,7 +106,8 @@ var manifest = [
     { id: "pickup2", src: "../../Assets_2/audio/pickups/Bonus 1.wav" }
 ];
 
-function preload(): void {
+function preload(): void
+{
     assets = new createjs.LoadQueue();
     assets.installPlugin(createjs.Sound);
     assets.on("complete", init, this);
@@ -111,7 +117,8 @@ function preload(): void {
     atlas = new createjs.SpriteSheet(data) // atlas is declared and holds sprites in the atlas spritesheet
 }
 
-function init():void {
+function init(): void
+{
     canvas = document.getElementById("canvas"); // reference to canvas element
     stage = new createjs.Stage(canvas); // passing canvas to stage
     stage.enableMouseOver(20); // enable mouse events
@@ -127,7 +134,8 @@ function init():void {
 }
 
 // Main Game Loop
-function gameLoop(event: createjs.Event): void {
+function gameLoop(event: createjs.Event): void
+{
     stats.begin(); // start counting
 
 
@@ -138,7 +146,8 @@ function gameLoop(event: createjs.Event): void {
 }
 
 // Setup Game Stats
-function setupStats():void {
+function setupStats(): void
+{
     stats = new Stats();
     stats.setMode(0); // shows fps
     stats.domElement.style.position = "absolute";
@@ -147,10 +156,12 @@ function setupStats():void {
     document.body.appendChild(stats.domElement);
 }
 // state machine prep
-function changeState(state): void {
+function changeState(state): void
+{
     // Launch various scenes
 
-    switch (state) {
+    switch (state)
+    {
         case config.MENU_STATE:
             // show the menu scene
             stage.removeAllChildren();
@@ -162,6 +173,12 @@ function changeState(state): void {
             stage.removeAllChildren();
             game = new states.Game();
             currentState = game;
+            break;
+        case config.PLAY_STATE02:
+            // show the play scene
+            stage.removeAllChildren();
+            game_level2 = new states.Game_level2();
+            currentState = game_level2;
             break;
         case config.OVER_STATE:
             // show the game over scene
@@ -180,4 +197,3 @@ function changeState(state): void {
     currentState.start();
     console.log(currentState.numChildren);
 }
- 

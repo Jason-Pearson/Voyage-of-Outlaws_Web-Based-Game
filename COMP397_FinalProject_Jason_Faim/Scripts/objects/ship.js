@@ -40,4 +40,3 @@ var objects;
     })(objects.GameObject);
     objects.Ship = Ship;
 })(objects || (objects = {}));
-//# sourceMappingURL=ship.js.map
