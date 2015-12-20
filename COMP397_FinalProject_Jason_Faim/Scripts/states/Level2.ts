@@ -25,7 +25,7 @@
         public start(): void {
 
             scoreboard.setLives(10);
-            scoreboard.setScore(0);
+            scoreboard.setScore(scoreboard._score);
             scoreboard.setCores(0);
             console.log(scoreboard.getLives());
             console.log(scoreboard.getScore());
