@@ -3,7 +3,7 @@
 	export class ScoreBoard {
 		// PRIVATE INSTANCE VARIABLES
 		public _score:number; // hold the number of barrels plundered
-		private _lives:number; // hold the number of lives the player/ship has
+		public _lives:number; // hold the number of lives the player/ship has
         public _cores: number;
 		// PUBLIC PROPERTIES
 		public setScore(value:number):void {

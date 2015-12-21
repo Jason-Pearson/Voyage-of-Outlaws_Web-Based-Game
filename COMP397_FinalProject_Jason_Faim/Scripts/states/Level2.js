@@ -18,7 +18,7 @@ var states;
         }
         // PUBLIC METHODS
         Level2.prototype.start = function () {
-            scoreboard.setLives(10);
+            scoreboard.setLives(scoreboard._lives + 10);
             scoreboard.setScore(scoreboard._score);
             scoreboard.setCores(0);
             console.log(scoreboard.getLives());
